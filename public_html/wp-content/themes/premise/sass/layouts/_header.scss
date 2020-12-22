@@ -1,49 +1,118 @@
-/* =============================================================================
-   Header
-   ========================================================================== */
-.header {
-	position: relative;
-	z-index: 100;
-}
-.brand {
-    width: 200px;
-    float: left;
-}
+header {
+    background: #1179D0;
+    // border-bottom: 2px solid $black;
+    height: 70px;
+    left:0;
+    top:0;
 
-/* =============================================================================
-   Navigation
-   ========================================================================== */
-.navigation {
-    display: inline-block;
-    font-size: 0;
-    float: right;
-
-    li {
-        display: inline-block;
-    }
     a {
-        font-size: 16px;
-        line-height: 30px;
-        display: block;
-        padding: 0 10px;
-    }
-    .dropdown {
-        position: relative;
-    }
-    .dropdown-wrapper {
-        display: none;
-        position: absolute;
-        top: 30px;
-        right: 0;
+        color: $pink;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 68px;
+        padding-bottom: 2px;
+        padding: 0 20px;
+        display: inline-block;
 
-        li {
-            display: block;
-            border-bottom: 1px solid rgba(0,0,0,.6);
+        &:hover {
+            text-decoration: none;
+            color: $purple;
+        }
 
-            &:last-child {
-                border-bottom: 0;
+        &.brand {
+            float: left;
+            padding: 0 10px 0 0;
+            // width: 245px;
+            color: $white;
+            font-weight: 600;
+            font-style: normal;
+
+            img {
+                width: 45px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            
+            span {
+                display: inline-block;
+            }
+
+            &:hover {
+                background-color: $blue;
+                color: $white;
             }
         }
     }
 
+    .nav {
+        float: right;
+        width: calc(100% - 240px);
+        text-align: right;
+
+        nav {
+            display: inline-block;
+        }
+    }
+    .desktop.header{
+        ul {
+        display:inline;
+        }
+    }
+    .mm-trigger,
+    .mobile.header {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    header {
+        a {
+            font-size: 12px;
+        } 
+
+        .nav {
+            a {
+                padding: 0 12px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    header {
+        .nav {
+            nav {
+                display: none;
+            }
+
+            .mm-trigger {
+                display: inline-block;
+            }
+        }
+    }
+}
+@include media-breakpoint-down(xs) {
+    header {
+        .nav {
+            width: auto;
+        }
+
+        a.brand {
+            width: auto;
+            float: none;
+            display: inline-block;
+
+            img {
+                position: relative;
+                top: -2px;
+                width: 35px;
+                margin-right: 5px;
+            }
+        }
+
+        a {
+            font-size: 15px;
+        }
+    }
 }
