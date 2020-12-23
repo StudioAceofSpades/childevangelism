@@ -6,8 +6,8 @@ header {
     top:0;
 
     a {
-        color: $pink;
-        font-size: 15px;
+        color: $white;
+        font-size: 18px;
         text-transform: uppercase;
         font-weight: 700;
         line-height: 68px;
@@ -17,7 +17,7 @@ header {
 
         &:hover {
             text-decoration: none;
-            color: $purple;
+            color: $white;
         }
 
         &.brand {
@@ -47,7 +47,7 @@ header {
 
     .nav {
         float: right;
-        width: calc(100% - 240px);
+        width: calc(100% - 350px);
         text-align: right;
 
         nav {
@@ -56,14 +56,21 @@ header {
     }
     .desktop.header{
         ul {
-        display:inline;
+            li{
+                display:inline-block;
+            }
         }
     }
     .mm-trigger,
     .mobile.header {
         display: none;
     }
+    
 }
+a,
+a:visited {
+    color: $white;
+    }
 
 @include media-breakpoint-down(lg) {
     header {
