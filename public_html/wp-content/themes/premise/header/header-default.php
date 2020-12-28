@@ -17,27 +17,28 @@ E-Mail: jon@studioaceofspade.com
 </head>
 
 <body id="top-of-page" <?php body_class(); ?>>
-
     <header class="header cf">
-        <a href="<?php bloginfo('url'); ?>" class="brand">
-            <img src="<?php bloginfo('template_directory'); ?>/img/logo.png">
-            Child Evangelism Ministries
-            
-        </a>
-        
-        <div class="nav">
-            <?php if(have_rows('navigation','options')): ?>
-                <nav class="desktop header">
-                    <?php include(locate_template('parts/navigation.php')); ?>
-                </nav>
-
-                <div class="mm-trigger">
-                    <i class="far fa-bars"></i>
-                </div>
+        <div class="container">
+            <a href="<?php bloginfo('url'); ?>" class="brand">
+                <img src="<?php bloginfo('template_directory'); ?>/img/logo.png">
+                Child Evangelism Ministries
                 
-                <nav class="mobile header">
-                    <?php include(locate_template('parts/navigation.php')); ?>
-                </nav>
-            <?php endif; ?>
+            </a>
+            
+            <div class="nav">
+                <?php if(have_rows('navigation','options')): ?>
+                    <nav class="desktop header">
+                        <?php include(locate_template('parts/navigation.php')); ?>
+                    </nav>
+
+                    <div class="mm-trigger">
+                        <i class="far fa-bars"></i>
+                    </div>
+                    
+                    <nav class="mobile header">
+                        <?php include(locate_template('parts/navigation.php')); ?>
+                    </nav>
+                <?php endif; ?>
+            </div>
         </div>
     </header>
