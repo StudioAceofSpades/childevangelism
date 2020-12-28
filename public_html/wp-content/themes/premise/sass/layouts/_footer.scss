@@ -1,0 +1,115 @@
+footer {
+    background:#2D4792;
+    border-top: 25px solid #1179D0;;
+    height: 317px;
+    justify-content: center;
+    position: relative;
+
+    .container h3{
+        position: absolute;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 27px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+    .container p{
+        position: relative;
+        top: 37px;
+        width: 730px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: #FFFFFF;
+    }
+    a {
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding-bottom: 20px;
+        // padding: 0 20px;
+        
+        
+
+        &:hover {
+            text-decoration: none;
+            background-color: $blue;
+            color: $white;
+            line-height: 38px;
+        }
+
+        
+    }
+
+    .nav {
+        float: right;
+        text-align: right;
+        line-height: 50px;
+        
+    
+    }
+    .desktop.footer{
+        ul {
+                display: block;
+            li{
+                display: block;
+                
+            }
+        }
+    }
+    .mm-trigger,
+    .mobile.footer {
+        display: none;
+    }
+    
+}
+a,
+a:visited {
+    color: $white;
+    }
+
+@include media-breakpoint-down(lg) {
+    footer {
+        a {
+            font-size: 12px;
+        } 
+
+        .nav {
+            a {
+                padding: 0 12px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    footer {
+        .nav {
+            nav {
+                display: none;
+            }
+
+            .mm-trigger {
+                display: inline-block;
+            }
+        }
+    }
+}
+@include media-breakpoint-down(xs) {
+    footer {
+        .nav {
+            width: auto;
+        }
+
+        a {
+            font-size: 15px;
+        }
+    }
+}

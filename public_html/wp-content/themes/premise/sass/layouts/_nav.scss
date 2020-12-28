@@ -5,10 +5,10 @@ nav {
         li {
             a {
                 display: block;
-                color: $pink;
+                color: $white;
 
                 &:hover {
-                    color: $purple;
+                    color: $white;
                 }
             }
         }
@@ -21,9 +21,7 @@ nav {
             li {
                 display: flex;
 
-                &:last-child {
-                    border-left: 2px solid $black;
-                }
+                
             }
         }
     }
