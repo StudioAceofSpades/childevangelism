@@ -60,9 +60,9 @@ if(!$hero_content && $hero_content_default) {
                                     <?php if($subtitle): ?>
                                         <span class="super"><?php echo $subtitle; ?></span>
                                     <?php endif; ?>
-                                    <span><?php echo $title; ?></span>
+                                    <!-- <span><?php echo $title; ?></span> -->
                                 </h1>
-                                <p><?php echo $hero_content; ?></p>
+                                <!-- <p><?php echo $hero_content; ?></p> -->
                             </div>
                         </div>
                     </div>
