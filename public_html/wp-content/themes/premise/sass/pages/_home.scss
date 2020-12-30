@@ -1,15 +1,82 @@
 #home{
-    .container{
-    background-color:  aqua;
-    }
+    
     .head{
-
+        margin-top: 60px;
+        position: absolute;
         width: 815px;
-        margin-left: auto;
+        margin-left: 40%;
         margin-right: auto;
         font-size: 40px;
         font-weight: 300;
         font-style: normal;
         line-height: 44.6px;
     }
-}
+    .sub{
+        position: relative;
+        width: 599px;
+        margin-top: 125px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 27px;
+        color: #000000;
+        margin-left: 24%;
+
+    }
+
+    .desc{
+        position: relative;
+        // margin-top: 10px;
+        width: 730px;
+        top: -30px;
+        left: 19%;
+        // padding-top: 0px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        color: #000000;
+    }
+    .buttons{
+        position: relative;
+        top: -50px;
+        padding-bottom: 10px;
+        left: 3%;
+        .button.Blue{
+            position: static;
+            width: 275px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #77DAFF;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .button.Yellow{
+        
+            position: static;
+            width: 275px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #FFDF34;
+            padding: 15px;
+            border-radius: 4px;
+            height: 46px;
+            }
+        }
+    }
+
