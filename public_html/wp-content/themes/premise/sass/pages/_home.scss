@@ -1,5 +1,12 @@
+
 #home{
-    
+   .hero{
+       position: relative;
+        width: 100%;
+        top: -60px;
+        left: 0;
+    // margin-bottom: 280px;
+}
     .head{
         margin-top: 60px;
         position: absolute;
@@ -78,5 +85,159 @@
             height: 46px;
             }
         }
+    h3{
+        // position: relative;
+        width: 357px;
+        height: 45px;
+        top: 127px;
+        margin-left: 37%;
+        // text-align: center;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 45px;
+        color: #000000;
+    }
+    .children{
+        margin-left: 13px;
+        img{
+            position: relative;
+            width: 308px;
+            height: 407px;
+            top:40px;
+            border: 4px solid #2D4792;
+            box-sizing: border-box;
+            outline: 4px solid #2D4792;;
+            outline-offset: 17px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+
+            .sam{
+                margin-right: 20px;;
+            }
+        }
+        
+    }
+    .secondary{
+        position: relative;
+        top: 35px;
+        padding-bottom: 20px;
+        left: -7px;
+        
+
+        .secondary.Blue{
+            position: static;
+            width: 275px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #77DAFF;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .secondary.purple{
+        
+            position: static;
+            width: 275px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #BC93F5;
+            padding: 15px;
+            border-radius: 4px;
+            height: 46px;
+            margin-right: 130px;
+            }
+
+        .secondary.Yellow{
+        
+            position: static;
+            width: 275px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #FFDF34;
+            padding: 15px;
+            border-radius: 4px;
+            height: 46px;
+            margin-right:120px;
+            // margin-left: -40px;
+            }
+    }
+    .title h2{
+        position: absolute;
+        width: 564px;
+        height: 45px;
+        // left: 405px;
+        top: 120px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 45px;
+        color: #000000;
+    }
+    .title h3{
+        position: relative;
+        width: 730px;
+        height: 72px;
+        left: -275px;
+        top: 180px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 150%;
+        color: #000000;
+    }
+    .title p{
+        position: relative;
+        width: 730px;
+        height: 112px;
+        // left: 405px;
+        margin-top: 190px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: #000000;
+    }
+    .title{
+        .club{
+            position: static;
+            float: left;
+            width: 284px;
+            height: 46px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: #FFDF34;
+            padding: 15px;
+            border-radius: 4px;
+            height: 46px;
+            margin-top: 185px;
+            margin-left: 30px;
+            text-align: center;
+        }
+    }
     }
 
