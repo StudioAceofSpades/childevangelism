@@ -61,8 +61,31 @@ get_header(); ?>
                     <a href="#" class="club">About Happy Day Club</a>
                 </div>
             </div>
-            <h1>next section</h1>
-
+            <img class="clubing" src="<?php bloginfo('template_directory'); ?>/img/club.png">
+            <div class="row">
+                <div class="col-sm text-center">
+                    <img class="togo" src="<?php bloginfo('template_directory'); ?>/img/togo.png">
+                </div>
+                <div class="col-sm righthalf">
+                    <h2>Togo, West Africa</h2>
+                    <h3>Our ministry here at CEM reaches beyond the boarders of Elkhart and LaGrange Counties...</h3>
+                    <img class="map" src="<?php bloginfo('template_directory'); ?>/img/map.png">
+                    <div class="mapbuttons">
+                        <a href="#" class="mapbuttons map">Learn about TogoR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row  Bottom">
+                <div class ="col text-center">
+                    <h2>Vacation Bible School</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
+                    <div class="sign">
+                        <a href="#" class="sign up">Sign up for VBS</a>
+                    </div>
+                </div>
+            </div>
+            <img class="final" src="<?php bloginfo('template_directory'); ?>/img/final.png">
         </div>
     </section>
 </div>
