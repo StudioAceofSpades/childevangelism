@@ -20,7 +20,7 @@ E-Mail: jon@studioaceofspade.com
     <header class="header cf">
         <div class="container">
             <a href="<?php bloginfo('url'); ?>" class="brand">
-                <img src="<?php bloginfo('template_directory'); ?>/img/logo.png">
+                <img src="<?php bloginfo('template_directory'); ?>/img/logo1.png">
                 Child Evangelism Ministries
                 
             </a>
