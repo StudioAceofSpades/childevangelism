@@ -18,7 +18,7 @@
     .bcard{
         position: relative;
         text-align: center;
-        background: #FFFFFF;
+        background: $white;
         opacity: 0.75;
         width: 875px;
         margin-left: 13%;
@@ -27,7 +27,7 @@
     .bcard2{
         position: relative;
         text-align: center;
-        background: #FFFFFF;
+        background: $white;
         opacity: 0.75;
         width: 875px;
         margin-left: 20%;
@@ -38,7 +38,7 @@
             text-decoration: none;
             margin-top: 10px;
             .button.Blue{
-                background-color: #0F8BD0;
+                background-color: $blue;
                 text-decoration: none;
             }
         }
@@ -71,7 +71,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 27px;
-        color: #000000;
+        color: $black;
         margin-left: 14%;
 
     }
