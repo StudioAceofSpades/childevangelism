@@ -6,14 +6,11 @@
     .backer2{
         background-image: url(../img/togo.png);
         margin-bottom: 70px;
-        // background-repeat: ;
-        // margin-left: 30px;
-        // width: 710px;
 
-        .mapi{
-            margin-left: -370px;
-            margin-top: -57px;
-        }
+        // .mapi{
+        //     margin-left: -370px;
+        //     margin-top: -57px;
+        // }
     }
     .bcard{
         position: relative;
@@ -21,31 +18,33 @@
         background: $white;
         opacity: 0.75;
         width: 875px;
-        margin-left: 13%;
-        margin: 30px 140px;
+        margin: auto;
+        margin-top: 67px;
+        margin-bottom: 100px;
+        
     }
-    .bcard2{
-        position: relative;
-        text-align: center;
-        background: $white;
-        opacity: 0.75;
-        width: 875px;
-        margin-left: 20%;
-        margin: 30px 150px;
-        height: 268px;
+    // .bcard2{
+    //     position: relative;
+    //     text-align: center;
+    //     background: $white;
+    //     opacity: 0.75;
+    //     // width: 875px;
+    //     // margin-left: 20%;
+    //     margin: 30px 150px;
+    //     height: 268px;
 
-        .buttons{
-            text-decoration: none;
-            margin-top: 10px;
-            .button.Blue{
-                background-color: $blue;
-                text-decoration: none;
-            }
-        }
+    //     .buttons{
+    //         text-decoration: none;
+    //         margin-top: 10px;
+    //         .button.Blue{
+    //             background-color: $blue;
+    //             text-decoration: none;
+    //         }
+    //     }
         
         
         
-    }
+    // }
    .hero{
        position: relative;
         width: 100%;
@@ -55,9 +54,12 @@
     .head{
         margin-top: 20px;
         position: absolute;
-        width: 815px;
-        margin-left: 0%;
+        display: block;
+        margin-left: auto;
         margin-right: auto;
+        align-items: center;
+        text-align: center;
+        padding-left: 10%;
         font-size: 40px;
         font-weight: 300;
         font-style: normal;
@@ -65,6 +67,11 @@
     }
     .sub{
         position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
         width: 599px;
         margin-top: 100px;
         font-style: normal;
@@ -72,7 +79,7 @@
         font-size: 24px;
         line-height: 27px;
         color: $black;
-        margin-left: 14%;
+        
 
     }
 
@@ -137,8 +144,8 @@
         // position: relative;
         width: 357px;
         height: 45px;
-        top: 127px;
-        margin-left: 37%;
+        // top: 127px;
+        // margin-left: 37%;
         // text-align: center;
         font-style: normal;
         font-weight: 300;
@@ -160,7 +167,7 @@
             margin-right: 50px;
             margin-bottom: 30px;
             .sam{
-                margin-right: 20px;;
+                margin-right: 20px;
             }
         }
         
@@ -430,10 +437,12 @@
         }
         .button.Blue{
             position: absolute;
-            background-color: #0F8BD0;
+            display: flex;
+            align-items: flex-start;
+            background-color: $blue;
             top: 250px;
-            margin-right: 20px;
-            margin-left: -285px;
+            // margin-right: 20px;
+            // margin-left: -285px;
             width: 85px;
             text-decoration: none;
             color: white;

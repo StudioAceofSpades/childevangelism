@@ -21,13 +21,15 @@ E-Mail: jon@studioaceofspade.com
         <div class="container">
             <a href="<?php bloginfo('url'); ?>" class="brand">
                 <img src="<?php bloginfo('template_directory'); ?>/img/logo1.png">
-                Child Evangelism Ministries
-                
+                <div class="text">
+                    <span class="name">Child Evangelism</span>
+                    <span class="named">Ministries</span>
+                </div>    
             </a>
             
-            <div class="nav">
+            <div class="nav-wrapper">
                 <?php if(have_rows('navigation','options')): ?>
-                    <nav class="desktop header">
+                    <nav class="main">
                         <?php include(locate_template('parts/navigation.php')); ?>
                     </nav>
 
