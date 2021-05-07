@@ -35,14 +35,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <a href="#" class="terms">Terms &amp; Privacy Policy</a>
-
-        <div class="social">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div> -->
     </div>
 </footer>
 </body>
