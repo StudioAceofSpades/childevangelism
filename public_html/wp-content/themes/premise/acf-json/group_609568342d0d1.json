@@ -135,6 +135,7 @@
                     "min": "",
                     "max": ""
                 },
+<<<<<<< Updated upstream
                 "layout_6099732f9ea9a": {
                     "key": "layout_6099732f9ea9a",
                     "name": "image_block",
@@ -266,6 +267,12 @@
                     "key": "layout_60994785c7e2e",
                     "name": "wisywyg",
                     "label": "WISYWYG",
+=======
+                "layout_60994785c7e2e": {
+                    "key": "layout_60994785c7e2e",
+                    "name": "wysiwyg",
+                    "label": "WYSIWYG",
+>>>>>>> Stashed changes
                     "display": "block",
                     "sub_fields": [
                         {
@@ -463,7 +470,11 @@
             {
                 "param": "page_template",
                 "operator": "==",
+<<<<<<< Updated upstream
                 "value": "default"
+=======
+                "value": "single-home.php"
+>>>>>>> Stashed changes
             }
         ]
     ],
@@ -475,5 +486,9 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+<<<<<<< Updated upstream
     "modified": 1620674173
+=======
+    "modified": 1620672907
+>>>>>>> Stashed changes
 }
