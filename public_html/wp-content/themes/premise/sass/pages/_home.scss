@@ -6,6 +6,8 @@
     .backer2{
         background-image: url(../img/togo.png);
         margin-bottom: 70px;
+        background-repeat: no-repeat;
+        background-position-x: center;
 
         // .mapi{
         //     margin-left: -370px;
@@ -197,16 +199,17 @@
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
         }
         .school{
-            position: relative;
+            position: absolute;
             color: #FFFFFF;
             font-weight: bold;
             font-size: 24px;
             height: 36px;
-            top: -518px;
-            left: 350px;
+            top: -330px;
+            left: 810px;
             font-family: Comfortaa;
             font-style: normal;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+
         }
     
     .content{
