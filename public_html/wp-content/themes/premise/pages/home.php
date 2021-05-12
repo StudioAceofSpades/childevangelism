@@ -9,8 +9,7 @@ get_header(); ?>
 
     <div id="home">
         <?php include(locate_template('parts/home.php')); ?>
-        
-        <section class="bg-white">
+        <!-- <section class="bg-white">
             <div class = "container">
                 <div class="children row">
                     <div class="col-sm text-center">
@@ -87,7 +86,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 
         <?php include(locate_template('parts/footer.php')); ?>
