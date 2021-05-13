@@ -3,6 +3,60 @@
     "title": "DONATE",
     "fields": [
         {
+            "key": "field_609c1b6ebc211",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_609c1b9cbc212",
+            "label": "header",
+            "name": "header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_609c1ba4bc213",
+            "label": "text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": ""
+        },
+        {
             "key": "field_6094969d9a8f5",
             "label": "Left Content",
             "name": "left_content",
@@ -130,5 +184,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620356408
+    "modified": 1620843509
 }

@@ -8,7 +8,7 @@ get_header(); ?>
     <?php include(locate_template('parts/header.php')); ?>
 
     <div id="donate">
-        <?php include(locate_template('parts/donate.php')); ?>
+        <?php include(locate_template('parts/hero/donate.php')); ?>
         <section class="bg-white">
             <div class="container">
                 <div class="row">

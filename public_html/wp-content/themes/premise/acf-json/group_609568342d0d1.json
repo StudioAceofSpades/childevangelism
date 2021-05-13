@@ -105,7 +105,11 @@
                                         "class": "",
                                         "id": ""
                                     },
+<<<<<<< Updated upstream
                                     "return_format": "array",
+=======
+                                    "return_format": "url",
+>>>>>>> Stashed changes
                                     "preview_size": "medium",
                                     "library": "all",
                                     "min_width": "",
@@ -708,5 +712,9 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+<<<<<<< Updated upstream
     "modified": 1620828030
+=======
+    "modified": 1620926649
+>>>>>>> Stashed changes
 }
