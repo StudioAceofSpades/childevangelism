@@ -7,10 +7,11 @@
         padding: 30px 0;
     }
 
-    .img-fluid{
-        height: 695px;
-        width: 540px;
-    }
+    // .img-fluid{
+    //     height: 695px;
+    //     width: 540px;
+    // }
+
     &.bottom-margin-off {
         margin-bottom: 0;
         padding-bottom: 0;
@@ -18,11 +19,32 @@
 
     .title {
         // font-family: $font;
-        font-size: 21px;
-        line-height: 26px;
+        font-size: 30spx;
+        line-height: 39px;
         margin: 0 0 20px 0;
         font-weight: 500;
         color: $black;
+
+
+    }
+
+    .wysiwyg {
+        margin-bottom: 0;
+
+        h4 {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        > *:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
 
     .desc {
@@ -44,6 +66,17 @@
 
         .button {
             margin: 0;
+            background-color: $blue;
+            color: $white;
+            padding: 15px;
+            font-size: 18px;
+            font-family: $font;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
     img {

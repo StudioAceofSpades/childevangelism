@@ -15,7 +15,7 @@
                             <?php endif; ?>
                             <?php if(get_sub_field('description','options')): ?>
                                 <?php $desc = get_sub_field('description'); ?>
-                                <div class="wysiwyg"><?php echo $desc ?></div>
+                                <div class="desc"><?php echo $desc ?></div>
                             <?php endif; ?>
                             <?php if(get_sub_field('column_button','options')): ?>
                                 <?php $btn = get_sub_field('column_button'); ?>

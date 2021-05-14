@@ -1,0 +1,78 @@
+.hero_block {
+    background-color: $light-gray;
+    margin: 50px 0 50px 0;
+
+    .hero-content {
+        position: relative;
+    
+    .header {
+        background-color: $white;
+        opacity: 75%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        padding: 50px;
+    }
+    
+    }
+
+    .buttons {
+        margin: 10px 0 0;
+
+        .button {
+            margin: 0;
+            background-color: $blue;
+            color: $white;
+            padding: 15px;
+            opacity: 100% !important;
+            font-size: 18px;
+            font-family: $font;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+
+
+        &:hover {
+            text-decoration: none;
+        }
+            
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .header {
+        padding: 0 !important;
+
+        h2 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 10px;
+        }
+
+        .buttons {
+            .button {
+                font-size: 12px;
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+
+    .hero-content {
+        position: unset !important;
+
+        .header {
+            padding: 20px !important;
+            position: unset !important;
+        }
+    }
+    
+
+}

@@ -19,6 +19,68 @@
             "endpoint": 0
         },
         {
+            "key": "field_609c0d7d7afb1",
+            "label": "Backdrop",
+            "name": "backdrop",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_609c0d687afb0",
+            "label": "header",
+            "name": "header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_609c0d9c7afb2",
+            "label": "textbox",
+            "name": "textbox",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_60994b48cebc2",
             "label": "Content",
             "name": "",
@@ -105,11 +167,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-<<<<<<< Updated upstream
                                     "return_format": "array",
-=======
-                                    "return_format": "url",
->>>>>>> Stashed changes
                                     "preview_size": "medium",
                                     "library": "all",
                                     "min_width": "",
@@ -515,7 +573,7 @@
                                     "key": "field_60994bca51652",
                                     "label": "Description",
                                     "name": "description",
-                                    "type": "button_group",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -524,11 +582,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "choices": [],
-                                    "allow_null": 0,
                                     "default_value": "",
-                                    "layout": "horizontal",
-                                    "return_format": "value"
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
                                 },
                                 {
                                     "key": "field_60994bd451653",
@@ -572,15 +630,15 @@
                 },
                 "layout_60994d544f4ff": {
                     "key": "layout_60994d544f4ff",
-                    "name": "hero",
-                    "label": "Hero",
+                    "name": "hero_block",
+                    "label": "Hero Block",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60994d594f500",
-                            "label": "Image",
-                            "name": "image",
-                            "type": "image",
+                            "key": "field_609d371327ba1",
+                            "label": "Hero Content",
+                            "name": "hero_content",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -589,35 +647,95 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_60994d614f501",
-                            "label": "Header",
-                            "name": "header",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Hero Block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609d373527ba2",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_609dfb8c92d53",
+                                    "label": "Image Two",
+                                    "name": "image_two",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_609d374127ba3",
+                                    "label": "Header",
+                                    "name": "header",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_609d374e27ba4",
+                                    "label": "Header Button",
+                                    "name": "header_button",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -712,9 +830,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-<<<<<<< Updated upstream
-    "modified": 1620828030
-=======
-    "modified": 1620926649
->>>>>>> Stashed changes
+    "modified": 1620966306
 }

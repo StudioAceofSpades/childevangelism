@@ -7,36 +7,34 @@
         padding: 30px 0;
     }
 
-    .img-fluid{
-        height: 100%;   
-     }
-
     &.bottom-margin-off {
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
+    .img-fluid {
+        height: 100%;   
+        position: relative;
+     }
+
+
     .title {
-        // font-family: $font;
-        font-size: 21px;
-        line-height: 26px;
-        margin: 0 0 20px 0;
-        font-weight: 500;
-        color: $black;
+        font-family: $font;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+        color: $white;
+        z-index: 999;
+        top: 15px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        text-align: center;
     }
 
     .desc {
         font-size: 16px;
-        // font-family: $font;
-    }
-
-    .wysiwyg {
-        margin-bottom: 0;
-
-        > *:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+        font-family: $body-font;
     }
 
     .buttons {
@@ -45,11 +43,23 @@
         .button {
             margin: 0;
             background-color: $orange;
-            color: black;
+            color: $white;
+            padding: 15px;
+            font-size: 18px;
+            font-family: $font;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+
+
+        &:hover {
+            text-decoration: none;
+        }
+            
         }
     }
+
     img {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
 
