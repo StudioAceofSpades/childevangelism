@@ -1,0 +1,41 @@
+.hero_block {
+    background-color: $light-gray;
+    margin: 50px 0 50px 0;
+
+    .hero-content {
+        position: relative;
+    
+    .header {
+        background-color: $white;
+        opacity: 75%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        padding: 50px;
+    }
+    
+    }
+
+    .buttons {
+        margin: 10px 0 0;
+
+        .button {
+            margin: 0;
+            background-color: $blue;
+            color: $white;
+            padding: 15px;
+            opacity: 100% !important;
+            font-size: 18px;
+            font-family: $font;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+
+
+        &:hover {
+            text-decoration: none;
+        }
+            
+        }
+    }
+}
