@@ -42,8 +42,37 @@
 
 @include media-breakpoint-down(md) {
     .header {
+        padding: 0 !important;
+
+        h2 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 16px;
+        }
         p {
             font-size: 10px;
         }
+
+        .buttons {
+            .button {
+                font-size: 12px;
+                margin-top: -10px;
+            }
+        }
     }
+}
+
+@include media-breakpoint-down(xs) {
+
+    .hero-content {
+        position: unset !important;
+
+        .header {
+            padding: 20px !important;
+            position: unset !important;
+        }
+    }
+    
+
 }
