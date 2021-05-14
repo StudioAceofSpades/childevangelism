@@ -39,3 +39,11 @@
         }
     }
 }
+
+@include media-breakpoint-down(md) {
+    .header {
+        p {
+            font-size: 10px;
+        }
+    }
+}
