@@ -1,5 +1,5 @@
 %heading {
-    font-family: $display-font;
+    font-family: "comfortaa";
     font-weight: $display-font-weight;
     line-height: $display-line-height;
 }
@@ -12,5 +12,8 @@
 p {
     font-size: $body-font-size;
     margin-bottom: $body-margin;
+}
+h2,h3,h4{
+    font-family: "comfortaa";
 }
 

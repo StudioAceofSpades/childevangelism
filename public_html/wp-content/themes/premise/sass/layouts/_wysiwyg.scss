@@ -3,6 +3,11 @@
     .wysiwyg-content{
         font-style: normal;
         font-family: $font;
+
+        h2{
+            font-family: $font;
+            margin-bottom: 20px;
+        }
         h3{
             font-family: $font;
             font-weight: 300;
