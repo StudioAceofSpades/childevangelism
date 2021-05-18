@@ -5,7 +5,7 @@
         {
             "key": "field_609d62440ef23",
             "label": "Header",
-            "name": "header",
+            "name": "hero_header",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -24,7 +24,7 @@
         {
             "key": "field_609d62550ef24",
             "label": "Content",
-            "name": "content",
+            "name": "hero_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -43,7 +43,7 @@
         {
             "key": "field_609d627f0ef25",
             "label": "Background Image",
-            "name": "background_image",
+            "name": "hero_background_image",
             "type": "image",
             "instructions": "1300px wide by 630px tall.",
             "required": 0,
@@ -67,7 +67,7 @@
         {
             "key": "field_609d62da0ef26",
             "label": "Buttons",
-            "name": "buttons",
+            "name": "hero_buttons",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -127,7 +127,7 @@
         {
             "key": "field_609d63580ef29",
             "label": "Hero Type",
-            "name": "type",
+            "name": "hero_type",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -178,5 +178,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620927914
+    "modified": 1621360751
 }

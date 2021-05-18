@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_609d459e2e31b",
-            "label": "Header",
-            "name": "header",
+            "label": "hero_Header",
+            "name": "hero_header",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -23,8 +23,8 @@
         },
         {
             "key": "field_609d46282e31c",
-            "label": "Content",
-            "name": "content",
+            "label": "hero_Content",
+            "name": "hero_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -42,8 +42,8 @@
         },
         {
             "key": "field_609d465b2e31d",
-            "label": "Background Image",
-            "name": "background_image",
+            "label": "hero_Background Image",
+            "name": "hero_background_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -66,8 +66,8 @@
         },
         {
             "key": "field_609d47fe2e320",
-            "label": "Buttons",
-            "name": "buttons",
+            "label": "hero_Buttons",
+            "name": "hero_buttons",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -178,5 +178,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620921074
+    "modified": 1621360721
 }
