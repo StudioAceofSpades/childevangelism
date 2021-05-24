@@ -27,7 +27,7 @@ if(get_sub_field('background_color') != 'ffffff') {
                             <?php endif; ?>
                             <?php if(get_sub_field('text')): ?>
                                 <?php $text = get_sub_field('text'); ?>
-                                <div class="text"><?php echo $text ?></div>
+                                <div class="wysiwyg"><?php echo $text ?></div>
                             <?php endif; ?>
                             <?php if(get_sub_field('column_button')): ?>
                                 <?php $btn = get_sub_field('column_button'); ?>
