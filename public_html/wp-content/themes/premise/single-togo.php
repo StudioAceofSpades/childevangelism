@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Vacation Bible Template
+Template Name: Togo Template
 */
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
