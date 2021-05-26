@@ -1,5 +1,9 @@
 .wysiwyg {
     font-family: $font;
+
+    a,a:visited{
+        color: #0F8BD0;
+    }
     .wysiwyg-content{
         font-style: normal;
         font-family: $font;
