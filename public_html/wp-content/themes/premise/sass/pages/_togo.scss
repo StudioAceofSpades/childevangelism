@@ -23,6 +23,13 @@
     #section-5 {
     .two-column-block {
         .container {
+                .name {
+                    color: black;
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 150%;
+                }
+
                 .title {
                     text-align: left;
                     color: $blue;

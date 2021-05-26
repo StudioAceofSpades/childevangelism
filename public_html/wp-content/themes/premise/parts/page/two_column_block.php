@@ -13,6 +13,10 @@ if(get_sub_field('background_color') != 'ffffff') {
                 <?php while(have_rows('column') ): the_row(); ?>
                     <div class="col-md-6<?php echo get_sub_field('center_paragraph') ? ' text-center' : '' ?>">
                         <div class="col-wrapper">
+                        <?php if(get_sub_field('name', 'options' )): ?>
+                                <?php $name = get_sub_field('name'); ?>
+                                <h2 class="name"><?php echo $name ?></h2>
+                            <?php endif; ?>
                             <?php if(get_sub_field('image')): ?>
                                 <?php $img = get_sub_field('image'); ?>
                                 <img src="<?php echo $img ?>" alt="<?php the_sub_field('title'); ?>" class="img-fluid">
