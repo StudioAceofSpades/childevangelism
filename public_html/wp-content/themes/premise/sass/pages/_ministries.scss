@@ -31,9 +31,16 @@
         }
     }
 
-    .container{
+    .container {
         margin-top: 60px;
 
+        .z {
+            p {
+                a, a:visited {
+                    color: #0F8BD0;
+                }
+            }
+        }
         .left{
             text-align: center;
         }
@@ -106,7 +113,7 @@
                     font-style: normal;
                     color: $black;
                 }            
-                a,a:link{
+                a,a:link,a:visited{
                     color: #086599;
                 }
             }
@@ -131,6 +138,9 @@
                     text-align: center;
                     margin: auto;
                     // margin-bottom: 20px;
+                }
+                a,a:link,a:visited {
+                    color: #086599;
                 }
             }
             .buttonn{
@@ -158,6 +168,8 @@
                         text-decoration: none;
                     }
                 }
+
+                
             }
         }
 

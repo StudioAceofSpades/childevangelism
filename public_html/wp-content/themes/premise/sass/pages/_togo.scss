@@ -1,0 +1,42 @@
+#togo {
+    #section-1 {
+        font-size: 30px;
+        font-family: $font;
+        text-align: center;
+    }
+
+    #section-2 {
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    #section-3 {
+        font-size: 18px;
+    
+    }
+
+
+
+
+    #section-5 {
+    .two-column-block {
+        .container {
+                .title {
+                    text-align: left;
+                    color: $blue;
+                    font-family: $font;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                .wysiwyg {
+                    font-size: 18px;
+                    margin-top: -15px;
+
+                }
+            }
+        }
+    }
+}
