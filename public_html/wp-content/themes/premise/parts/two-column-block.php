@@ -9,6 +9,10 @@
                                 <h2 class="title"><?php echo $title ?></h2>
                             <?php endif; ?>
                             <div class="col-wrapper">
+                            <?php if(get_sub_field('name','options')): ?>
+                                <?php $name = get_sub_field('name'); ?>
+                                <h2 class="name"><?php echo $name ?></h2>
+                            <?php endif; ?>
                             <?php if(get_sub_field('image','options')): ?>
                                 <?php $img = get_sub_field('image'); ?>
                                 <img src="<?php echo $img['url'] ?>" alt="<?php the_sub_field('title'); ?>" class="img-fluid">
