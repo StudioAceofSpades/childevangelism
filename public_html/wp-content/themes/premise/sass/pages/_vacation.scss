@@ -1,8 +1,50 @@
 #vacation{
     font-family: $font;
 
-    .wysiwyg-content{
+    .background {
+        background-image: url(../img/modelelementaryschool.png);
+        background-repeat: round;
+    }
+    .bcard{
+        position: relative;
+        text-align: center;
+        background: $white;
+        opacity: 0.75;
+        width: 810px;
+        margin: auto;
+        margin-top: 67px;
+        margin-bottom: 100px;
+        
+    
+    .head{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 45px;
+        color: $black;
+    }
 
+    // .desc{
+    //     display: inline-block;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: 630px;
+    //     font-weight: normal;
+    //     font-size: 16px;
+    //     line-height: 28px;
+    //     text-align: center;
+    //     color: $black;
+    // }
+}
+
+    .wysiwyg-content{
+        margin-top: 60px;
         h3{
             margin-bottom: 30px;
         }

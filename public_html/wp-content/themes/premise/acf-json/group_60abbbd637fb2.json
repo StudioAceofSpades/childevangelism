@@ -3,6 +3,41 @@
     "title": "Vacation Bible",
     "fields": [
         {
+            "key": "field_60aeb08539cf3",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60aeb0af39cf4",
+            "label": "header",
+            "name": "header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60abbc205000e",
             "label": "Vacation Content",
             "name": "vacation_content",
@@ -374,5 +409,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621879642
+    "modified": 1622061245
 }
