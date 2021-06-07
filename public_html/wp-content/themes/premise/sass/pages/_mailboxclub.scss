@@ -1,0 +1,90 @@
+#mailboxclub {
+    .form {
+
+        color: $blue;
+        font-family: $font;
+
+        .form-content {
+            margin: 0 200px 0 200px;
+        }
+
+        input[type="checkbox"],
+            input[type="radio"] {
+                display: none;
+
+                + label {
+                    position: relative;
+                    padding-left: 35px;
+                    font-weight: 400;
+                    line-height: 1.8rem;
+                    font-size: 16px;
+
+
+                    &::before,
+                    &::after {
+                        @extend .transition;
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        left: 0;
+                    }
+
+                    &::before {
+                        width: 26px;
+                        height: 26px;
+                        border: 3px solid $blue;
+                        background: $white;
+                    }
+
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: $white;
+                        top: 8px;
+                        left: 8px;
+                        opacity: 0;
+                    }
+                }
+
+                &:checked {
+                    + label {
+                        &::before {
+                            background-color: $blue;
+                        }
+
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            input[type=radio] {
+                + label {
+                    &::before {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+    input, .ginput_container_textarea {
+        border: 1px solid #0F8BD0;
+        box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            display: table;
+            margin: 0 auto;
+            z-index: 1;
+            color: $white;
+            font-size: 18px;
+            padding: 10px 200px 10px 200px;
+            background-color: $blue;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+    }
+
+
