@@ -13,7 +13,7 @@
                     <a href="#" class="subtract">
                         <img src="<?php bloginfo('template_directory'); ?>/img/Subtract.png" class="img-fluid">
                     </a>
-                    © 2020 Child Evangelism Ministries
+                    &copy; <?php echo date('Y'); ?> Child Evangelism Ministries
                 </p>
 
             </div>
