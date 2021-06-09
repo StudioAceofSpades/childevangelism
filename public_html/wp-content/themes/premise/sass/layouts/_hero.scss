@@ -1,390 +1,96 @@
-.hero-bgs {
-    background-position-y: top;
-    background-repeat: no-repeat;
-    background-position-x: calc(50% + 450px);
-    background-size: 1300px;
-}
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(5px,-25px,0);
-  }
-  50% {
-    transform: translate3d(-10px,5px,0);
-  }
+.header {
+    display: none !important;
 }
 .hero {
-    @extend .hero-bgs;
-    position: relative;
-    z-index: 10;
-
-    h1  {
-        margin-bottom: 20px;
-    }
-
-    p {
-        margin-bottom: 20px;
-    }
-
-    &.author {
-        h1 {
-            font-size: 32px;
-            line-height: 1;
-        }
-        h3 {
-            font-size: 18px;
-            line-height: 1;
-            margin-bottom: 5px;
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 21px;
-            margin-bottom: 10px;
-        }
-    }
-
-    .swoop {
-        @extend .hero-bgs;
-
-        .content {
-            width: 65%;
-
-            h3 {
-                a {
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .social {
-        margin-left: -5px;
-        margin-right: -5px;
-
-        a {
-            margin: 0 5px;
-            
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-
-    .bgs {
-        position: absolute;
-        left: 0;
-        top: -10px;
-        bottom: 0;
-        right: 0;
-        overflow: hidden;
-        display: none;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            top: 0;
-            background: $white;
-            width: calc(50% - 200px);
-        }
-
-        img {
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: calc(50% - 200px);
-
-            &.middle {
-			    animation: swell 6.191919s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-            }
-
-            &.bottom {
-                animation: swell 7.82342s ease -2.784363s infinite;
-            }
-
-        }
-    }
-
-    &.lg {
-        height: 630px;
-    
-        // .swoop {
-        //     background-image: url(../img/imageoverlay-right.png);
-
-            
-        // }
-    }
-
-    &.animated {
-        .bgs {
-            display: block;
-        }
-        .swoop {
-            background-image: none!important;
-        }
-    }
-
-
-    &.sm {
-        height: 320px;
-
-        // .swoop {
-        //     background-image: url(../img/imageoverlay-short.png);
-        // }
-    }
-
-    &.old {
-        background-color: $blue;
-        position: relative;
-
-        .swoop {
-
-            .categories{
-                .buttons{
-                    font-size: 0;
-                    margin: 0 -10px;
-
-                        .button {
-                            @extend .transition;
-                            display: inline-block;
-                            font-family: $font;
-                            border-radius: 20px;
-                            padding: 9px 14px;
-                            margin: 0 5px 5px;
-                            font-size: 12px;
-                            line-height: 18px;
-                            text-transform: uppercase;
-                            text-align: center;
-                            font-weight: 400;
-                            color: $white;
-                            cursor: pointer;
-                            box-shadow: 0 3px 5px -5px rgba(0,0,0,.3);
-
-                            $button-colors:
-                                (green, $orange, $orange),
-                                (blue,  $blue, $blue)
-                            ;
-
-                            @each $color-name, $bg-color, $hover-bg-color in $button-colors {
-                                &.#{$color-name} {
-                                    background-color: $bg-color;
-
-                                &:hover {
-                                    background-color: $hover-bg-color;
-                                }
-                            }
-                        }
-
-                        &.gradient {
-                            background-size: 200% auto;
-                            background-image:
-                                linear-gradient(
-                                    90deg,
-                                    rgba($blue, 1)    0%,
-                                    rgba($green, 1)   50%,
-                                    rgba($blue, 1)    100%,
-                                )
-                            ;
-
-                            &:hover {
-                                color: $white;
-                                background-position-x: 100%;
-                            }
-                        }
-
-                        &:visited {
-                            color: $white;
-                        }
-
-                        &:hover {
-                            text-decoration: none;
-                            transform: translateY(-1px);
-                            box-shadow: 0 15px 20px -10px rgba(0,0,0,.3);
-                            color: $white;
-                        }
-
-                        &.no-movement {
-                            &:hover {
-                                transform: none;
-                                box-shadow: none;
-                            }
-                        }
-                    }
-                }
-            }
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                top: 0;
-                background: $white;
-                width: calc(50% - 200px);
-            }
-        }
-
-        h1 {
-            font-size: 36px;
-            line-height: 1.2;
-        }
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .hero-bgs {
-        background-position-x: calc(50% + 420px);
-    }
-
-    .hero {
-
-        &.lg {
-            background-size: 1140px;
-            height: 550px;
-
-            .swoop {
-                background-size: 1140px;
-            }
-        }
-        &.animated.lg {
-            background-size: 1230px;
-
-            .bgs {
-                img {
-                    height: 560px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1360px) {
-    .hero-bgs {
-        background-position-x: calc(50% + 390px);
-    }
-
-    .hero {
-        &.lg {
-            background-size: 1040px;
-            height: 500px;
-
-            .swoop {
-                background-size: 1040px;
-            }
-        }
-        &.animated.lg {
-            .bgs {
-                img {
-                    height: 540px;
-                }
-            }
-        }
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .hero-bgs {
-        background-position-x: calc(50% + 210px);
+    .hero-wrapper {
+        height: 390px;
+        background-repeat: no-repeat;
         background-size: cover;
-    }
-
-    .hero {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: "";
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            background-image:
-                linear-gradient(
-                    0deg,
-                    rgba($white, 1)  0%,
-                    rgba($white, 0)  100%,
-                )
-            ;
-            height: 30%;
-        }
-
-        &.lg,
-        &.sm {
-            .swoop {
-                background-image:
-                    linear-gradient(
-                        90deg,
-                        rgba($white, 1)  40%,
-                        rgba($white, 0)  100%
-                    )
-                ;
-                background-position: center;
-
-                .content {
-                    width: 80%;
-                }
-            }
-        }
-        &.animated.lg {
-            .bgs {
-                display: none;
-            }
-            .swoop {
-                background-image:
-                    linear-gradient(
-                        90deg,
-                        rgba($white, 1)  40%,
-                        rgba($white, 0)  100%
-                    )
-                !important;
-                background-position: center;
-
-                .content {
-                    width: 100%;
-                }
-            }
-        }
-        &.old {
-            .swoop::before {
-                display: none;
-            }
-        }
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .hero-bgs {
         background-position: center;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
 
-    .hero {
-        &.lg,
-        &.sm {
-            height: auto;
-            background-size: cover;
+        h1 {
+            font-size: 40px;
+            line-height: 1;
+            margin: 0;
+        }
 
-            .swoop {
-                background-image: none;
-                background-color: rgba($white, .65);
-                padding: 30px 0;
+        &.simple {
+            height: 250px;
 
-                .content {
-                    width: 100%;
+            h1 {
+                display: inline-block;
+                background: rgba(255,255,255,.75);
+                padding: 25px 35px;
+            }
+        }
 
-                    
+        &.expanded {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .hero-card {
+                padding: 25px 35px;
+                background: rgba(255,255,255,.75);
+                width: 100%;
+                max-width: 810px;
+                text-align: center;
+
+                > *:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+            h1 {
+                margin: 0 0 20px;
+            }
+            p,
+            li {
+                font-family: $body-font;
+                font-size: 18px;
+                line-height: 1.77;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            a {
+                color: $blue;
+                font-weight: 700;
+
+                &:hover {
+                    color: $orange;
+                    text-decoration: none;
                 }
             }
         }
     }
 }
+
 @include media-breakpoint-down(sm) {
     .hero {
-        padding-top: 30px;
-    }
-    #home .hero {
-        padding-top: 60px;
+        .hero-wrapper {
+            h1 {
+                font-size: 24px;
+            }
+            &.expanded {
+                .hero-card {
+                    padding: 15px;
+                    width: 90%;
+                    max-width: 90%;
+                }
+                h1 {
+                    margin-bottom: 10px;
+                }
+                p {
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+            }
+        }
     }
 }

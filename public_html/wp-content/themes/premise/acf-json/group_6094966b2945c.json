@@ -1,9 +1,9 @@
 {
     "key": "group_6094966b2945c",
-    "title": "DONATE",
+    "title": "Donate Settings",
     "fields": [
         {
-            "key": "field_609c1b6ebc211",
+            "key": "field_60c1073e40ec6",
             "label": "Hero",
             "name": "",
             "type": "tab",
@@ -19,10 +19,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_609c1b9cbc212",
-            "label": "header",
-            "name": "header",
-            "type": "text",
+            "key": "field_60c1074b40ec7",
+            "label": "Hero",
+            "name": "hero",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,17 +31,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "clone": [
+                "group_60c106daa4420"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         },
         {
-            "key": "field_609c1ba4bc213",
-            "label": "text",
-            "name": "text",
-            "type": "textarea",
+            "key": "field_60c100d4d9773",
+            "label": "Page Content",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -50,11 +52,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 5,
-            "new_lines": ""
+            "placement": "left",
+            "endpoint": 0
         },
         {
             "key": "field_6094969d9a8f5",
@@ -181,8 +180,18 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
-    "modified": 1620843509
+    "modified": 1623263102
 }
