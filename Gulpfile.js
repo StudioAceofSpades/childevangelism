@@ -10,23 +10,24 @@ const  source_dir         =  "sourcemaps/";
 const  files              =  resource_dir +  "sass/**/*.scss";
 const  prodOutput         =  resource_dir;
 const  devOutput          =  resource_dir +  "devcss/";
+
 var devOptions = {
     errLogToConsole : true,
     outputStyle     : 'expanded',
     stdout          : false,
     stderr          : false,
 };
+
 var prodOptions = {
     outputStyle: 'compressed'
 };
+
 function dev() {
     return (
         gulp
             .src(files)
             .pipe(sourcemaps.init())
-            .pipe(sass(devOptions).on('error', function(err) {
-                done(err);
-            }))
+            .pipe(sass(devOptions))
             .pipe(autoprefixer())
             .pipe(concat('style.css'))
             .pipe(sourcemaps.write(source_dir))

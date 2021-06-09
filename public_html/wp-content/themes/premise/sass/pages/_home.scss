@@ -1,9 +1,11 @@
 
 #home{
-    .backer{
+
+    .backer {
         background-image: url(../img/cover.png);
     }
-    .backer2{
+
+    .backer2 {
         background-image: url(../img/togo.png);
         margin-bottom: 70px;
         background-repeat: no-repeat;
@@ -14,7 +16,8 @@
         //     margin-top: -57px;
         // }
     }
-    .bcard{
+
+    .bcard {
         position: relative;
         text-align: center;
         background: $white;
@@ -23,8 +26,8 @@
         margin: auto;
         margin-top: 67px;
         margin-bottom: 100px;
-        
     }
+
     // .bcard2{
     //     position: relative;
     //     text-align: center;
@@ -44,16 +47,9 @@
     //         }
     //     }
         
-        
-        
     // }
-   .hero{
-       position: relative;
-        width: 100%;
-        top: -60px;
-        left: 0;
-    }
-    .head{
+
+    .head {
         margin-top: 20px;
         position: absolute;
         display: block;
@@ -67,7 +63,8 @@
         font-style: normal;
         line-height: 44.6px;
     }
-    .sub{
+
+    .sub {
         position: relative;
         display: block;
         margin-left: auto;
@@ -81,11 +78,9 @@
         font-size: 24px;
         line-height: 27px;
         color: $black;
-        
-
     }
 
-    .desc{
+    .desc {
         position: relative;
         // margin-top: 10px;
         width: 630px;
@@ -100,49 +95,9 @@
         text-align: left;
         color: #000000;
     }
-    .buttons{
-        position: relative;
-        top: -50px;
-        padding-bottom: 10px;
-        left: 2%;
-        text-decoration: none;
-        .button.Blue{
-            position: static;
-            width: 275px;
-            height: 46px;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 20px;
-            letter-spacing: 0.045em;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            background-color: #FF4E19;
-            padding: 15px;
-            border-radius: 4px;
-            text-decoration: none;
-        }
 
-        .button.Yellow{
-        
-            position: static;
-            width: 275px;
-            height: 46px;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 20px;
-            letter-spacing: 0.045em;
-            text-transform: uppercase;
-            color:  #FFFFFF;
-            background-color: #0F8BD0;
-            padding: 15px;
-            border-radius: 4px;
-            height: 46px;
-            text-decoration: none;
-            }
-    }
-    h3{
+
+    h3 {
         // position: relative;
         width: 357px;
         height: 45px;
@@ -155,9 +110,11 @@
         line-height: 45px;
         color: #000000;
     }
-    .children{
+
+    .children {
         margin-left: 13px;
-        img{
+
+        img {
             position: relative;
             width: 308px;
             height: 350px;
@@ -168,13 +125,14 @@
             outline-offset: 17px;
             margin-right: 50px;
             margin-bottom: 30px;
-            .sam{
+
+            .sam {
                 margin-right: 20px;
             }
         }
-        
     }
-    .story{
+
+    .story {
             position: relative;
             color: #FFFFFF;
             font-weight: bold;
@@ -182,11 +140,12 @@
             height: 36px;
             top: -330px;
             left: -370px;
-            font-family: Comfortaa;
+            font-family: $header-font;
             font-style: normal;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
         }
-        .club{
+
+        .club {
             position: relative;
             color: #FFFFFF;
             font-weight: bold;
@@ -194,11 +153,12 @@
             height: 36px;
             top: -426px;
             left: 0px;
-            font-family: Comfortaa;
+            font-family: $header-font;
             font-style: normal;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
         }
-        .school{
+
+        .school {
             position: absolute;
             color: #FFFFFF;
             font-weight: bold;
@@ -206,13 +166,12 @@
             height: 36px;
             top: -330px;
             left: 810px;
-            font-family: Comfortaa;
+            font-family: $header-font;
             font-style: normal;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-
         }
     
-    .content{
+    .content {
         position: relative;
         top: 19px;
         padding-bottom: 230px;
@@ -220,7 +179,7 @@
         text-align: left;
         width: 300px;
         
-        .children{
+        .children {
             position: absolute;
             // width: 350px;
             height: 224px;
@@ -233,7 +192,8 @@
             line-height: 28px;
             color: #000000;
         }
-        .happy{
+
+        .happy {
             position: absolute;
             width: 330px;
             height: 224px;
@@ -246,7 +206,8 @@
             line-height: 28px;
             color: #000000;
         }
-        .bible{
+
+        .bible {
             position: absolute;
             width: 320px;
             height: 224px;
@@ -260,14 +221,15 @@
             color: #000000;
         }
     }
-    .secondary{
+
+    .secondary {
         position: relative;
         top: 35px;
         padding-bottom: 80px;
         left: -10px;
         text-decoration: none;
 
-        .secondary.Blue{
+        &.Blue {
             position: static;
             width: 275px;
             height: 46px;
@@ -277,15 +239,14 @@
             line-height: 20px;
             letter-spacing: 0.045em;
             text-transform: uppercase;
-            color: #FFFFFF;;
+            color: #FFFFFF;
             background-color: #FF4E19;
             padding: 15px;
             border-radius: 4px;
             margin-left: 130px;
         }
 
-        .secondary.purple{
-        
+        &.purple {
             position: static;
             width: 275px;
             height: 46px;
@@ -304,8 +265,7 @@
             margin-left: auto;
             }
 
-        .secondary.Yellow{
-        
+        &.Yellow {
             position: static;
             width: 275px;
             height: 46px;
@@ -324,45 +284,49 @@
             margin-left: -100px;
             }
     }
-    .title h2{
-        position: absolute;
-        width: 564px;
-        height: 45px;
-        // left: 405px;
-        top: 120px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 40px;
-        line-height: 45px;
-        color: #000000;
-    }
-    .title h3{
-        position: relative;
-        width: 730px;
-        height: 72px;
-        left: -275px;
-        top: 180px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 150%;
-        color: #000000;
-    }
-    .title p{
-        position: relative;
-        width: 730px;
-        height: 112px;
-        // left: 405px;
-        margin-top: 190px;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 28px;
-        color: #000000;
-    }
-    .title{
-        .club{
+
+    .title {
+        h2 {
+            position: absolute;
+            width: 564px;
+            height: 45px;
+            // left: 405px;
+            top: 120px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 45px;
+            color: #000000;
+        }
+
+        h3 {
+            position: relative;
+            width: 730px;
+            height: 72px;
+            left: -275px;
+            top: 180px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 150%;
+            color: #000000;
+        }
+
+        p {
+            position: relative;
+            width: 730px;
+            height: 112px;
+            // left: 405px;
+            margin-top: 190px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            color: #000000;
+        }
+
+        .club {
             position: static;
             float: left;
             width: 284px;
@@ -383,21 +347,21 @@
             text-align: center;
         }
     }
-    .clubing{
+
+    .clubing {
         position: relative;
         width: 100%;
         margin-top: -50px;
         margin-bottom: 20px;
         left: 0;
     }
-    .togo{
 
+    .togo {
         margin-bottom: 80px;
     }
     
-    .righthalf{
-    
-        h2{
+    .righthalf {
+        h2 {
             position: relative;
             width: 540px;
             height: 78px;
@@ -410,7 +374,7 @@
             top: 25px;
         }
 
-        h3{
+        h3 {
             position: absolute;
             width: 540px;
             height: 72px;
@@ -425,7 +389,8 @@
             top: 160px;
             left: 27px;
         }
-        p{
+
+        p {
             position: absolute;
             width: 540px;
             height: 128px;
@@ -438,7 +403,8 @@
             line-height: 177.68%;
             color: #000000;
         }
-        .button.Blue{
+
+        .button.Blue {
             position: absolute;
             display: flex;
             align-items: flex-start;
@@ -455,13 +421,12 @@
             padding-left: 5px;
             // padding-top: 2.5px;
         }
-        
     }
-        
 
-    .Bottom{
+    .Bottom {
         // margin-top: 120px;
-        h2{
+
+        h2 {
             position: relative;
             width: 449px;
             height: 45px;
@@ -475,7 +440,8 @@
             margin-left:auto;
             margin-right: auto;
         }
-        h3{
+
+        h3 {
             // position: relative;
             width: 503px;
             height: 27px;
@@ -490,7 +456,7 @@
             margin-top: 20px;
         }
 
-        p{
+        p {
             position: relative;
             width: 730px;
             height: 112px;
@@ -505,8 +471,9 @@
             margin-right: auto;
             margin-top: 20px;
         }
-        .sign{
-            .sign.up{
+
+        .sign {
+            .sign.up {
                 position: static;
                 width: 245px;
                 height: 46px;
@@ -528,12 +495,11 @@
                 
             }
         }
+    }
 
-        }
-    .final{
+    .final {
         position: relative;
         width: 100%;
         left: 0;
     }
-    }
-
+}
