@@ -144,4 +144,7 @@ function saos_output_link($link, $classes="") {
 	}
 }
 
+/** Makes sure back end JS & CSS load. */
+define('CONCATENATE_SCRIPTS', false);
+
 ?>

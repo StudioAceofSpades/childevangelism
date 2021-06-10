@@ -104,7 +104,7 @@
                                     "key": "field_60943c0c75a8a",
                                     "label": "Description",
                                     "name": "description",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -115,9 +115,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": "wpautop"
                                 },
                                 {
                                     "key": "field_60943c2275a8b",
@@ -190,7 +190,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "modified": 1620328226
+    "modified": 1623264864
 }
