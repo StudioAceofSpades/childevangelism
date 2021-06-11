@@ -3,185 +3,125 @@ header {
     font-style: normal;
     background: $white;
     border-bottom: 3px solid $orange;
-    height: 70px;
-    left:0;
-    top:0;
+    line-height: 1;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
 
     a.brand {
-        float: left;
-        padding: 0 10px 0 0;
-        width: 240px;
+        display: block;
         color: $blue;
+        width: 270px;
         font-weight: 700;
-        font-size: 20px;
-        line-height: 20px;
-        align-items: center;
+        font-size: 0;
 
-        img {
-            width: 63px;
-            margin-right: 20px;
-            margin-left: 10px;
-            margin-top: 10px;
+        img,
+        span {
+            display: inline-block;
         }
         span {
-            display: block;
-            line-height: 1;
-
-            &.named {
-                font-size: 20px;
-                // padding-top: 4px;
+            font-size: 20px;
+            position: relative;
+            top: 17px;
+            padding-left: 10px;
+        }
+        &:hover {
+            span {
+                color: $orange;
             }
         }
-        .text {
-            display: inline-block;
-            position: absolute;
-            font-size: 20px;
-            color: $blue;
-            top: 10px;
-        }
-
     }
 
     .nav-wrapper {
-        display: flex;
-        text-align: right;
-        float: right;
+        width: calc(100% - 270px);
+        font-size: 0;
 
-        nav {
-            display: flex;
-        }
-
-    }
-
-    nav {
-        &.mobile {
-            @extend .transition, .no-select;
-            position: absolute;
-            z-index: 2;
+        ul,
+        .main {
             width: 100%;
-            background-color: $white;
+            text-align: right;
+        }
+
+        .mm-trigger {
             display: none;
-            padding-top: 30px;
-            right: 0;
-            left: 0;
-
-            ul {
-                li {
-                    a {
-                        text-align: center;
-                        line-height: 50px;
-                    }
-                }
-            }
-
-            &.header {
-                top: 70px;
-                bottom: 0;
-            }
-
-            &.footer {
-                bottom: 295px;
-                padding: 0;
-
-                border-top: 2px solid $black;
-            }
-
-            &.open {
-                display: block;
-            }
         }
-}
 
-nav.main {
-    &.mobile {
-        display: none;
-    }
-
-    ul {
-        display: flex;
-        margin: 0;
-
-        li {
-            display: flex;
-
-            a {
-                display: flex;
-                align-items: center;
-                color: $orange;
-                font-size: 18px;
-                text-transform: uppercase;
-                font-weight: 400;
-                line-height: 20.07px;
-                padding-bottom: 2px;
-                padding-right: 30px;
-
-
-                &:hover {
-                    text-decoration: none;
-                    color: $orange
-                }
-            }
-        }
-    }
-
-    > ul > li:first-child > a {
-        color: $orange;
-
-        &:hover {
+        a, a:visited {
             color: $orange;
+            font-size: 20px;
+            line-height: 70px;
+
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
         }
-    }
-}
+        li {
+            display: inline-block;
+            text-align: right;
+            padding: 0 0 0 40px;
 
-}
-@include media-breakpoint-down(lg) {
-    header {
-        a {
-            font-size: 12px;
-        } 
-
-        .nav {
-            a {
-                padding: 0 12px;
+            &:first-child {
+                padding: 0;
             }
         }
     }
 }
 
 @include media-breakpoint-down(md) {
-    header {
-        .nav {
-            nav {
-                display: none;
-            }
-
-            .mm-trigger {
-                display: inline-block;
-            }
-        }
-    }
-}
-@include media-breakpoint-down(xs) {
-    header {
-        .nav {
-            width: auto;
-        }
-
+    .header {
         a.brand {
-            width: auto;
-            float: none;
-            display: inline-block;
+            width: 230px;
+            line-height: 70px;
+            height: 70px;
 
-            img {
-                position: relative;
-                top: -2px;
-                width: 35px;
-                margin-right: 5px;
+            span {
+                font-size: 14px;
+                line-height: 1;
+                top: 13px;
             }
         }
+        .nav-wrapper {
+            position: relative;
+            width: 70px;
 
-        a {
-            font-size: 15px;
+            .main {
+                display: none;
+                position: absolute;
+                top: 71px;
+                right: 0;
+                background: $white;
+                width: 270px;
+                border-bottom: 3px solid $orange;
+
+                li {
+                    display: block;
+                    padding: 0;
+
+                    a {
+                        line-height: 1;
+                        font-size: 16px;
+                        padding: 10px 15px;
+
+                        &:hover {
+                            background: $orange;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .mm-trigger {
+                display: block;
+                float: right;
+                color: $blue;
+
+                &:hover {
+                    color: $white;
+                    background: $blue;
+                }
+            }
         }
     }
 }

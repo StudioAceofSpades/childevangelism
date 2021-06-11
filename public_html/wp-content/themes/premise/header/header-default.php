@@ -21,10 +21,7 @@ E-Mail: jon@studioaceofspade.com
         <div class="container">
             <a href="<?php bloginfo('url'); ?>" class="brand">
                 <img src="<?php bloginfo('template_directory'); ?>/img/logo1.png">
-                <div class="text">
-                    <span class="name">Child Evangelism</span>
-                    <span class="named">Ministries</span>
-                </div>    
+                <span class="text">Child Evangelism<br>Ministries</span>
             </a>
             
             <div class="nav-wrapper">
@@ -36,10 +33,6 @@ E-Mail: jon@studioaceofspade.com
                     <div class="mm-trigger">
                         <i class="far fa-bars"></i>
                     </div>
-                    
-                    <nav class="mobile header">
-                        <?php include(locate_template('parts/navigation.php')); ?>
-                    </nav>
                 <?php endif; ?>
             </div>
         </div>
