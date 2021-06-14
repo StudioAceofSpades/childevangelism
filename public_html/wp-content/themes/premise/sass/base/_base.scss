@@ -38,6 +38,10 @@ input[type="submit"]:hover,
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 .no-select {
     user-select: none;
 }

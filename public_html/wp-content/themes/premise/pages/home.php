@@ -4,92 +4,108 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header(); ?>
 
-<body id="top-of-page">
-    <?php include(locate_template('parts/header.php')); ?>
+<div id="home">
+    <?php include(locate_template('parts/hero.php')); ?>
 
-    <div id="home">
-        <?php include(locate_template('parts/home.php')); ?>
-        <!-- <section class="bg-white">
-            <div class = "container">
-                <div class="children row">
-                    <div class="col-sm text-center">
-                        <div class="img">
-                            <img class="sam" src="<?php bloginfo('template_directory'); ?>/img/children.png">
-                            <img class="esther" src="<?php bloginfo('template_directory'); ?>/img/happy.png">
-                            <img class="secret" src="<?php bloginfo('template_directory'); ?>/img/bible.png">
-                        </div>
+    <section id="main">
+        <?php if(have_rows('features')): ?>
+        <div class="features container">
+            
+            <div class="row">
+            <?php while(have_rows('features')) : the_row(); ?>
+                <div class="col-md-4 feature">
+                    <?php if($image = get_sub_field('image')): ?>
+                    <div class="image">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                        <?php if($title = get_sub_field('title')): ?>
+                        <h3><?php echo $title; ?></h3>
+                        <?php endif; ?>
                     </div>
+                    <?php endif; ?>
+                    
+                    <?php if($description = get_sub_field('description')): ?>
+                    <div class="description">
+                        <?php echo $description; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if($link = get_sub_field('button')): ?>
+                    <div class="buttons">
+                        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button <?php the_sub_field('button_color'); ?>"><?php echo $link['title']; ?></a>
+                    </div>
+                    <?php endif; ?>
+
                 </div>
-                <div class = "row text">
-                    <div class = "col-sm text-center trans">
-                            <p class = "story"> Children’s Stories</p>
-                            <p class = "club"> Happy Day Club </p>
-                            <p class = "school"> Vacation Bible School</p>
+            <?php endwhile; ?>
+            </div>
+
+        </div>
+        <?php endif; ?>
+
+        <?php if($bg = get_field('featured_background_image')): ?>
+        <div class="featured-content" style="background-image: url('<?php echo $bg['url']; ?>');">
+            <div class="container">
+                <div class="card">
+
+                    <?php if($title = get_field('title')): ?>
+                    <h3><?php echo $title; ?></h3>
+                    <?php endif; ?>
+
+                    <?php if($subtitle = get_field('subtitle')): ?>
+                    <h4><?php echo $subtitle; ?></h4>
+                    <?php endif; ?>
+
+                    <?php if($description = get_field('featured_description')) : ?>
+                    <div class="description">
+                        <?php echo $description; ?>
                     </div>
-                </div>
-                <div class = "row text">
-                    <div class = "col-sm text-center" style="margin-top: -250px;">
-                        <div class = "content">
-                            <p class = "children"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <p class = "happy"> Happy Day Clubs are after school Bible clubs meeting once a week for one hour from October through March. Happy Day Clubs are taught by teams of trained volunteers. Each week children are taught a Bible lesson, hear the next chapter of an exciting missionary story, sing songs, learn a Bible verse and so much more! </p>
-                            <p class = "bible"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <div>
+                    <?php endif; ?>
+                    
+                    <?php if($link = get_field('link')): ?>
+                    <div class="buttons">
+                        <a href="<?php echo $link['url']; ?>" class="button blue" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                     </div>
-                </div>
-                <div class="row secondary">
-                    <div class="col-sm text-center">
-                        <div class="secondary">
-                            <a href="#" class="secondary Yellow">WATCH STORIES ONLINE</a>
-                            <a href="#" class="secondary purple">ABOUT HAPPY DAY CLUB</a>
-                            <a href="#" class="secondary Blue">SIGN UP FOR VES</a>
-                        </div>
-                    </div>
-                </div>
-                <div class = "backer2 d-flex align-items-center">
-                    <div class = "bcard2">
-                        <div class="row">
-                            <div class = "col text-center">
-                                <h2 class="head">Togo, West Africa</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class = "col text-center">
-                                <p class="sub">Meet our team 6000 miles away in Togo, West Africa!</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class = "col text-center">
-                                <p class="desc">Our ministry here at CEM reaches beyond the boarders of Elkhart and LaGrange Counties...</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col text-center">
-                                <div class="buttons">
-                                    <a href="#" class="button Blue">LEARN ABOUT TOGO</a>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                    <img class="mapi" src="<?php bloginfo('template_directory'); ?>/img/westafrica.png">
-                </div>
-                <div class = "row">
-                        <div class="col-sm text-center">
-                            <img class="togo" src="<?php bloginfo('template_directory'); ?>/img/ele.png">
-                        </div>
-                        <div class="col-sm righthalf">
-                            <h2>Donate to Child Evangelism Ministeries</h2>
-                            <h3>Help fund our mission. Lorem ipsum dolor sit amet consectetur</h3>
-                            <p class = "subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <div class = "buttons">
-                                <a href="#" class = "button Blue">DONATE</a>
-                            </div>
-                    </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
-        </section> -->
-    </div>
+        </div>
+        <?php endif; ?>
 
-        <?php include(locate_template('parts/footer.php')); ?>
-</body>
+        <div class="donate container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <?php if($image = get_field('donate_image')): ?>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <?php endif; ?>
+                </div>
+                <div class="col-md-6">
+                    
+                    <?php if($title = get_field('donate_title')) : ?>
+                    <h3><?php echo $title; ?></h3>
+                    <?php endif; ?>
+                    
+                    <?php if($subtitle = get_field('donate_subtitle')): ?>
+                    <h4><?php echo $subtitle; ?></h4>
+                    <?php endif; ?>
+
+                    <?php if($description = get_field('donate_description')): ?>
+                    <div class="description">
+                        <?php echo $description; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if($link = get_field('donate_link')): ?>
+                    <div class="buttons">
+                        <a href="<?php echo $link['url']; ?>" class="button blue" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                    </div>
+                    <?php endif; ?>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
 
 <?php get_footer(); ?>
