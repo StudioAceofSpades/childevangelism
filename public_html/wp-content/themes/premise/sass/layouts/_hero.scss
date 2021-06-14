@@ -96,7 +96,8 @@
             h1 {
                 font-size: 24px;
             }
-            &.expanded {
+            &.expanded,
+            &.hero-home {
                 .hero-card {
                     padding: 15px;
                     width: 90%;
@@ -105,10 +106,26 @@
                 h1 {
                     margin-bottom: 10px;
                 }
+                .hero-card {
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
                 p {
                     margin-bottom: 10px;
                     font-size: 15px;
                     line-height: 1.5;
+                }
+                .buttons {
+                    margin: 0;
+
+                    .button {
+                        display: block;
+                        margin: 0;
+                    }
+                    .button + .button {
+                        margin-top: 10px;
+                    }
                 }
             }
         }

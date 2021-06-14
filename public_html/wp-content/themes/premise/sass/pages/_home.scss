@@ -98,3 +98,33 @@
         }
     }
 }
+@include media-breakpoint-down(sm) {
+    .features {
+        max-width: 350px;
+        margin: 0 auto 30px;
+        
+        .feature + .feature {
+            margin-top: 30px;
+        }
+    }
+    .featured-content {
+        .card {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 15px;
+
+            h3 {
+                font-size: 24px;
+                margin: 0 0 20px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+    .donate {
+        img {
+            margin: 0 0 30px;
+        }
+    }
+}
