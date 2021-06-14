@@ -1,9 +1,9 @@
 {
     "key": "group_609568342d0d1",
-    "title": "Pages",
+    "title": "Page Settings",
     "fields": [
         {
-            "key": "field_609568a43ea2e",
+            "key": "field_60c7812514f6e",
             "label": "Hero",
             "name": "",
             "type": "tab",
@@ -15,11 +15,32 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
-            "key": "field_60994b48cebc2",
+            "key": "field_60c7813614f70",
+            "label": "Hero",
+            "name": "hero",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60c106daa4420"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
+            "key": "field_60c7812e14f6f",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -31,7 +52,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -806,27 +827,6 @@
             "button_label": "Add Module",
             "min": "",
             "max": ""
-        },
-        {
-            "key": "field_609d653aeb181",
-            "label": "Hero",
-            "name": "hero",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_609d622de1c9d"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 1
         }
     ],
     "location": [
@@ -843,8 +843,19 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
-    "modified": 1622058524
+    "modified": 1623687498
 }

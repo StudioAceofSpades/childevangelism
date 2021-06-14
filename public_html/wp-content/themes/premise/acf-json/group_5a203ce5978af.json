@@ -179,81 +179,6 @@
             "button_label": "Add Menu Section",
             "min": "",
             "max": ""
-        },
-        {
-            "key": "field_5a203e3957c0e",
-            "label": "Misc. Settings",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5a203e1257c0a",
-            "label": "Social Media Links",
-            "name": "social_media_links",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5a203e1e57c0b",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "text",
-                    "instructions": "Available icons are located here: http:\/\/fontawesome.io\/icons\/#brand. Simply enter the name of the icon to use it.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5a203e2557c0c",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
         }
     ],
     "location": [
@@ -271,7 +196,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1512064620
+    "modified": 1623687201
 }
