@@ -1,114 +1,30 @@
 .two-column-block {
     margin-bottom: 30px;
-    font-style: normal;
-    font-family: $font;
 
-    &.background-color {
-        padding: 30px 0;
-    }
-
-    // .img-fluid{
-    //     height: 695px;
-    //     width: 540px;
-    // }
-
-    &.bottom-margin-off {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    .text{
-        margin-top: 40px;
-        font-family: $font;
-        
-        line-height: 27px;
-        font-weight: bold;
-        a{
-            color: #086599;
-            
-        }
-    }
-
-    .title {
-        font-family: $font;
-        margin: 0 auto;
-        text-align: center;
-        align-items: center;
-        font-size: 30px;
-        line-height: 33.45px;
-        margin: 0 0 20px 0;
-        // font-weight: 500;
-        color: $black;
-        h3{
-            font-weight: 300;
-        }
-
-
-    }
-
-    .wysiwyg {
-        margin-bottom: 0;
-
-        h4 {
-            font-size: 24px;
-            line-height: 36px;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 18px;
-            width: 540px;
-            line-height: 31.98px;
-        }
-
-        > *:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    .desc {
-        font-size: 16px;
-        // font-family: $font;
-    }
-
-    .wysiwyg {
-        margin-bottom: 0;
-
-        > *:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    .buttons {
-        margin: 30px 0 0;
+    .col-wrapper {
         display: flex;
-        justify-content: center;
-        margin-bottom: 95px;
-
-        .button {
-            margin: 0;
-            background-color: $blue;
-            color: $white;
-            padding: 15px;
-            font-size: 18px;
-            font-family: $font;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    img {
-        margin-bottom: 30px;
+
+    .title,
+    .wysiwyg {
+        width: 100%;
+        text-align: center;
+    }
+    .buttons {
+        width: 100%;
+        margin-top: auto;
+        text-align: center;
     }
 }
 
 @include media-breakpoint-down(md) {
     .two-column-block,
     .three-column-block {
+        margin-bottom: 0;
+
         .col-wrapper {
             margin-bottom: 30px;
         }
