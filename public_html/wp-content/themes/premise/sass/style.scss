@@ -44,8 +44,10 @@
 @import 'components/cms-video';
 @import 'components/cms-call-to-action';
 @import 'components/cms-big-image';
+@import 'components/slick';
 
 /** Pages **/
+@import 'pages/about';
 @import 'pages/contact';
 @import 'pages/home';
 @import 'pages/donate';
