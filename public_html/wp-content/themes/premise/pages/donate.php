@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 d-none .d-sm-block d-lg-block left">
+                <div class="col-md-6 left">
                     <?php if(have_rows('left_content')): ?>
                     <div class="half">
                         <?php while(have_rows('left_content')) :
@@ -21,12 +21,14 @@ get_header(); ?>
                          $button = get_sub_field('left_button');
                         ?>
                         <p class="text-black"><?php echo $text; ?></p>
-                        <a href="<?php echo $button['url']; ?>" class="button orange"><?php echo $button['title']; ?></a>
+                        <div class="buttons">
+                            <a href="<?php echo $button['url']; ?>" class="button orange"><?php echo $button['title']; ?></a>
+                        </div>
                         <?php endwhile; ?>
                     </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-lg-6 d-none .d-sm-block d-lg-block right">
+                <div class="col-md-6 right">
                     <?php if(have_rows('right_content')): ?>
                     <div class="half">
                         <?php while(have_rows('right_content')) :
@@ -35,7 +37,9 @@ get_header(); ?>
                         $button = get_sub_field('right_button');
                         ?>
                         <p class="text-black"><?php echo $text; ?></p>
-                        <a href="<?php echo $button['url']; ?>" class="button blue"><?php echo $button['title']; ?></a>
+                        <div class="buttons">
+                            <a href="<?php echo $button['url']; ?>" class="button blue"><?php echo $button['title']; ?></a>
+                        </div>
                         <?php endwhile; ?>
                     </div>
                     <?php endif; ?>

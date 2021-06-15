@@ -51,47 +51,11 @@
                 font-weight: normal;
             }
             .button.orange{
-                background-color: $orange;
-                color: $white;
-                text-transform: uppercase;
-                display: inline-block;
-                flex-direction: column;
-                text-align: center;
-                width: 250px;
-                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-                padding: 15px;
-                letter-spacing: 0.045em;
-                font-size: 18px;
-                line-height: 20px;
-                font-weight: normal;
-            
-
                 &:hover{
                     text-decoration: none;
                 }
-
             }
             .button.blue{
-                background-color: $blue;
-                color: $white;
-                text-transform: uppercase;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                width: 250px;
-                height: 50px;
-                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-                padding: 15px;
-                letter-spacing: 0.045em;
-                font-size: 18px;
-                line-height: 20px;
-                font-weight: normal;
-                
-                a, a:link{
-                    width: 219px;
-                }
-
                 &:hover{
                     text-decoration: none;
                 }
@@ -100,4 +64,15 @@
         }
     }
 
+}
+
+@include media-breakpoint-down(sm) {
+    #donate {
+        .buttons {
+            .button {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
 }
