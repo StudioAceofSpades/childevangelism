@@ -33,6 +33,9 @@ function saos_load_scripts() {
 
 // Add support for featured images
 add_theme_support( 'post-thumbnails' );
+add_image_size('square', 500, 500, true);
+add_image_size('small_gallery', 1200, 295, false);
+add_image_size('gallery', 1000, 1000, false);
 
 function disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

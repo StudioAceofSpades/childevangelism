@@ -121,7 +121,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -185,8 +185,8 @@
                     "allow_null": 0,
                     "other_choice": 0,
                     "default_value": "",
-                    "layout": "",
-                    "return_format": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
                     "save_other_choice": 0
                 }
             ]
@@ -248,6 +248,25 @@
             ]
         },
         {
+            "key": "field_60c8d2db57ced",
+            "label": "Mission Statement",
+            "name": "mission_statement",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
             "key": "field_60c8d2ca57cea",
             "label": "Buttons",
             "name": "declaration_buttons",
@@ -306,25 +325,6 @@
                     "save_other_choice": 0
                 }
             ]
-        },
-        {
-            "key": "field_60c8d2db57ced",
-            "label": "Mission Statement",
-            "name": "mission_statement",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": "br"
         },
         {
             "key": "field_60c8d1fc57cdf",
@@ -398,11 +398,11 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_60c8d30c57cf0",
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
+            "button_label": "Add Staff",
             "sub_fields": [
                 {
                     "key": "field_60c8d30c57cf0",
@@ -516,5 +516,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623774044
+    "modified": 1623775893
 }
