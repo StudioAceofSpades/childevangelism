@@ -12,6 +12,13 @@
             margin-bottom: 25px;
         }
 
+        a {
+            &:hover {
+                color: $orange;
+                text-decoration: none;
+            }
+        }
+
         .social {
             margin-left:-5px ;
             margin-right:-5px ;
@@ -38,15 +45,37 @@
         label {
             color: $blue;
             text-transform: uppercase;
+            margin-bottom: 0;
         }
 
-        gform_wrapper {
-            input {
+        .gform_wrapper {
+            input,
+            textarea {
+                border-color: $orange;
+            }
 
+            .gfield_required {
+                display: none;
+            }
+
+            input {
                 &[type="submit"] {
                     background-color: $orange;
+
+                    &:hover {
+                        background-color: $dark-orange;
+                    }
                 }
             }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #contact {
+        .contact-container {
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }

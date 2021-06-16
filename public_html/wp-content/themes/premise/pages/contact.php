@@ -15,7 +15,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md">
+                <div class="col-md-4">
                     <p class="social">
                         <?php if (get_field('facebook_link', 'options')): ?>
                             <a href="<?php the_field('facebook_link', 'options'); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -50,7 +50,7 @@ get_header(); ?>
                         </p>
                     <?php endif; ?>
                 </div>
-                <div class="col-md">
+                <div class="col-md-8">
                     <?php cfct_loop(); ?>
                 </div>
             </div>
