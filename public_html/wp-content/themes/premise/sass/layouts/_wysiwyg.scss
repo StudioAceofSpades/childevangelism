@@ -26,4 +26,12 @@
         line-height: 1.77;
         margin: 0 0 20px;
     }
+
+    img {
+        &.aligncenter {
+            display: block;
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+    }
 }

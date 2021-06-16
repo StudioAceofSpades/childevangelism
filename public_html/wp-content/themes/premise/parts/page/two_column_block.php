@@ -2,8 +2,12 @@
     <div class="container">
         <div class="row">
             <?php if (have_rows('column')): ?>
-                <?php while(have_rows('column') ): the_row(); ?>
-                    <div class="col-md-6 col-wrapper">
+                <?php 
+                while(have_rows('column') ): 
+                    the_row(); 
+                    $class = strtolower(get_sub_field('horizontal_alignment') . ' ' . get_sub_field('vertical_alignment'));
+                    ?>
+                    <div class="col-md-6 col-wrapper <?php echo $class; ?>">
 
                         <?php if($image = get_sub_field('image')): ?>
                             <img src="<?php echo $image; ?>" alt="<?php the_sub_field('title'); ?>" class="img-fluid">
