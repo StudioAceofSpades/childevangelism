@@ -2,6 +2,7 @@
     $(document).ready(function() {
         bindHeader();
         customSelect();
+        initSliders();
     });
 
     function bindHeader() {
@@ -54,6 +55,20 @@
                 $styledSelect.removeClass('active');
                 $list.slideUp(200).removeClass('open');
             });
+        });
+    }
+
+    function initSliders() {
+        $('.slider').slick({
+            slidesToShow    : 1,
+            slidesToScroll  : 1,
+            variableWidth   : true,
+            autoplay        : true,
+            autoplaySpeed   : 2000,
+            infinite        : true,
+            arrows          : false,
+            focusOnSelect   : true,
+            centerMode      : true,
         });
     }
 
