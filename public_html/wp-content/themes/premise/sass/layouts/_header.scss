@@ -12,25 +12,28 @@ header {
 
     a.brand {
         display: block;
-        color: $blue;
         width: 270px;
         font-weight: 700;
         font-size: 0;
+
+        &:hover {
+            span {
+                color: $orange;
+            }
+        }
 
         img,
         span {
             display: inline-block;
         }
+
         span {
+            @extend .transition;
             font-size: 20px;
             position: relative;
             top: 17px;
             padding-left: 10px;
-        }
-        &:hover {
-            span {
-                color: $orange;
-            }
+            color: $blue;
         }
     }
 
@@ -58,6 +61,7 @@ header {
                 text-decoration: none;
             }
         }
+
         li {
             display: inline-block;
             text-align: right;
@@ -83,6 +87,7 @@ header {
                 top: 13px;
             }
         }
+
         .nav-wrapper {
             position: relative;
             width: 70px;
@@ -112,6 +117,7 @@ header {
                     }
                 }
             }
+
             .mm-trigger {
                 display: block;
                 float: right;
