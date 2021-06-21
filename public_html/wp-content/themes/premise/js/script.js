@@ -3,7 +3,29 @@
         bindHeader();
         customSelect();
         initSliders();
+        initAccordions();
     });
+
+    function initAccordions() {
+        $('.accordion-button').click(function(e) {
+            e.preventDefault();
+            var $this = $(this)
+            var $accordion = $this.parents('.accordion');
+            if(!$this.parents('.accordion-item').hasClass('active')) {
+                $accordion
+                    .find('.active')
+                    .removeClass('active')
+                    .find('.collapse')
+                    .slideUp(function() {
+                        $this
+                            .parents('.accordion-item')
+                            .addClass('active')
+                            .find('.collapse')
+                            .slideDown();
+                    });
+            }
+        });
+    }
 
     function bindHeader() {
         $('.mm-trigger').click(function() {
