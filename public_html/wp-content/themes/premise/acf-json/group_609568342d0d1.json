@@ -492,7 +492,43 @@
                     "name": "video_block",
                     "label": "Video",
                     "display": "block",
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_60d0f4dd18f4e",
+                            "label": "Video Title",
+                            "name": "video_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60d0f4e318f4f",
+                            "label": "Video Link",
+                            "name": "video_link",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        }
+                    ],
                     "min": "",
                     "max": ""
                 },
@@ -711,5 +747,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624306815
+    "modified": 1624306949
 }
