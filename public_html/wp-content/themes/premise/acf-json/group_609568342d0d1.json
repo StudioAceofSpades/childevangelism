@@ -166,7 +166,7 @@
                 "layout_6099936aa776e": {
                     "key": "layout_6099936aa776e",
                     "name": "image_block",
-                    "label": "Image Block",
+                    "label": "Images",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -490,13 +490,58 @@
                 "layout_609a9801d8b6d": {
                     "key": "layout_609a9801d8b6d",
                     "name": "video_block",
-                    "label": "Video Block",
+                    "label": "Video",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_609a980ad8b6e",
-                            "label": "Video",
-                            "name": "video",
+                            "key": "field_609a9841d8b6f",
+                            "label": "Video Title",
+                            "name": "video_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_609a9857d8b70",
+                            "label": "Video Link",
+                            "name": "video_link",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60ca2c2a824c7": {
+                    "key": "layout_60ca2c2a824c7",
+                    "name": "accordion_block",
+                    "label": "Accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60ca2c31824c8",
+                            "label": "Accordion",
+                            "name": "accordion",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -509,16 +554,16 @@
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "table",
-                            "button_label": "Add Video",
+                            "layout": "row",
+                            "button_label": "Add Accordion Item",
                             "sub_fields": [
                                 {
-                                    "key": "field_609a9841d8b6f",
-                                    "label": "Video Title",
-                                    "name": "video_title",
+                                    "key": "field_60ca2ce4824c9",
+                                    "label": "Title",
+                                    "name": "title",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -532,20 +577,23 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_609a9857d8b70",
-                                    "label": "Video Link",
-                                    "name": "video_link",
-                                    "type": "oembed",
+                                    "key": "field_60ca2cea824ca",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "textarea",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
                                         "id": ""
                                     },
-                                    "width": "",
-                                    "height": ""
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": "wpautop"
                                 }
                             ]
                         }
@@ -554,7 +602,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Module",
+            "button_label": "Add Content",
             "min": "",
             "max": ""
         }
@@ -587,5 +635,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623787055
+    "modified": 1623862694
 }
