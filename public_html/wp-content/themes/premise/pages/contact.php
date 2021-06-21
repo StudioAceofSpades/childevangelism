@@ -10,11 +10,6 @@ get_header(); ?>
     <div class="container">
         <div class="contact-container bg-white">
             <div class="row">
-                <div class="col text-center">
-                    <h3>Get in Touch</h3>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-4">
                     <p class="social">
                         <?php if (get_field('facebook_link', 'options')): ?>
