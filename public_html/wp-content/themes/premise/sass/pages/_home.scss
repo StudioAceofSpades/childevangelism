@@ -97,6 +97,10 @@
             margin: 0 0 20px;
         }
     }
+
+    .buttons {
+        text-align: left;
+    }
 }
 @include media-breakpoint-down(sm) {
     .features {
