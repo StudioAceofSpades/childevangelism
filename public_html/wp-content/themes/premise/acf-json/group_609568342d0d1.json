@@ -137,8 +137,8 @@
                         },
                         {
                             "key": "field_609ab394cc45e",
-                            "label": "Align Buttons Left",
-                            "name": "align_buttons_left",
+                            "label": "Button Alignment",
+                            "name": "button_alignment",
                             "type": "radio",
                             "instructions": "",
                             "required": 0,
@@ -149,12 +149,12 @@
                                 "id": ""
                             },
                             "choices": {
-                                "false": "No",
-                                "true": "Yes"
+                                "center": "Center",
+                                "left": "Left"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
-                            "default_value": "",
+                            "default_value": "center",
                             "layout": "horizontal",
                             "return_format": "value",
                             "save_other_choice": 0
@@ -747,5 +747,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624306949
+    "modified": 1625774093
 }

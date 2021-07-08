@@ -5,26 +5,34 @@
     a,a:visited{
         color: #0F8BD0;
     }
+
     h2 {
         font-family: $header-font;
         margin-bottom: 0 0 20px;
     }
+
     h3 {
         font-family: $header-font;
         font-weight: 300;
         margin: 0 0 20px;
         font-size: 30px;
     }
+
     h4 {
         font-family: $header-font;
         font-size: 24px;
         line-height: 36px;
         font-weight: 700;
     }
+
     p {
         font-size: 18px;
         line-height: 1.77;
         margin: 0 0 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     img {
