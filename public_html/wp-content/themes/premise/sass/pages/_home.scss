@@ -4,16 +4,27 @@
     img {
         max-width: 100%;
     }
+
     .image {
         position: relative;
         margin: 0 0 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba($black,.4) 0%, rgba($black,0) 30%);
+        }
 
         h3 {
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
-            padding: 20px;
+            padding: 15px 15px 0;
             color: $white;
             font-weight: 700;
             line-height: 1.25;
@@ -22,21 +33,25 @@
             text-align: center;
         }
     }
+
     p {
         font-size: 16px;
         margin: 0 0 20px;
         line-height: 1.77;
     }
+
     .feature {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
     }
+
     .buttons {
         margin-top: auto;
     }
 }
+
 .featured-content {
     height: 697px;
     position: relative;
@@ -62,12 +77,14 @@
             font-weight: 300;
             margin: 0 0 30px;
         }
+
         h4 {
             font-size: 24px;
             font-weight: 700;
             line-height: 1;
             margin: 0 0 20px;
         }
+
         p {
             font-size: 18px;
             line-height: 1.77;
@@ -75,6 +92,7 @@
         }
     }
 }
+
 .donate {
     margin-bottom: 60px;
 
@@ -84,12 +102,14 @@
         line-height: 1.2;
         margin: 0 0 20px;
     }
+
     h4 {
         font-size: 24px;
         font-weight: 700;
         line-height: 1.2;
         margin: 0 0 20px;
     }
+
     .description {
         p {
             font-size: 18px;
@@ -102,6 +122,7 @@
         text-align: left;
     }
 }
+
 @include media-breakpoint-down(sm) {
     .features {
         max-width: 350px;
@@ -111,6 +132,7 @@
             margin-top: 30px;
         }
     }
+
     .featured-content {
         .card {
             max-width: 90%;
@@ -126,6 +148,7 @@
             }
         }
     }
+
     .donate {
         img {
             margin: 0 0 30px;
