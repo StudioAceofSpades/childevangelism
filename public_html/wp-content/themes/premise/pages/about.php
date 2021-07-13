@@ -37,21 +37,6 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="gallery">
-            <div class="container">
-                <h2>Photo Gallery</h2>
-            </div>
-            <?php if($images = get_field('photos')): ?>
-                <div class="slider">
-                    <?php foreach($images as $image): ?>
-                        <div class="slide">
-                            <img src="<?php echo $image['sizes']['small_gallery']; ?>" alt="<?php echo $image['alt']; ?>">
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-        </div>
-
         <div class="staff">
             <div class="container">
                 <h2>Staff</h2>
