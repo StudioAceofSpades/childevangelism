@@ -11,35 +11,29 @@ get_header(); ?>
     <section id="main">
         <div class="intro">
             <div class="container">
-                <?php if($header = get_field('intro_header')): ?>
-                    <h2><?php echo $header; ?></h2>
-                <?php endif; ?>
-
-                <?php if($subheader = get_field('intro_subheader')): ?>
-                    <h3><?php echo $subheader; ?></h3>
-                <?php endif; ?>
-
                 <div class="row">
-                    <div class="col-sm-6">
-                        <?php the_field('intro_left_content'); ?>
-                    </div>
-                    <div class="col-sm-6">
-                        <?php the_field('intro_right_content'); ?>
+                    <div class="col">
+                        <?php if($header = get_field('intro_header')): ?>
+                            <h2><?php echo $header; ?></h2>
+                        <?php endif; ?>
+                        <?php if($subheader = get_field('intro_subheader')): ?>
+                            <h3><?php echo $subheader; ?></h3>
+                        <?php endif; ?>
+                        <?php the_field('content'); ?>
+                        <?php if(have_rows('intro_buttons')): ?>
+                            <div class="buttons">
+                                <?php 
+                                while(have_rows('intro_buttons')) :
+                                    the_row(); 
+                                    $link   = get_sub_field('link');
+                                    $color  = get_sub_field('color');
+                                    ?>
+                                    <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="<?php echo $color; ?> button"><?php echo $link['title']; ?></a>
+                                <?php endwhile; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-                
-                <?php if(have_rows('intro_buttons')): ?>
-                <div class="buttons">
-                    <?php 
-                    while(have_rows('intro_buttons')) : 
-                        the_row(); 
-                        $link   = get_sub_field('link');
-                        $color  = get_sub_field('color');
-                        ?>
-                        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="<?php echo $color; ?> button"><?php echo $link['title']; ?></a>
-                    <?php endwhile; ?>
-                </div>
-                <?php endif; ?>
             </div>
         </div>
 
@@ -89,34 +83,35 @@ get_header(); ?>
                 <div class="container">
                     <h2>Declaration of Faith</h2>
                     <?php if(have_rows('declarations')): ?>
-                    <div class="row">
-                        <div class="col-md-6">
-                        <?php 
-                        $counter = 0;
-                        while(have_rows('declarations')):
-                            $counter++;
-                            the_row();
-                            if($counter % 2 == 0):
-                            ?>
-                            <p><?php the_sub_field('declaration'); ?></p>
-                            <?php 
-                            endif;
-                        endwhile; ?>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <?php
+                                $counter = 0;
+                                while(have_rows('declarations')):
+                                    $counter++;
+                                    the_row();
+                                    if($counter % 2 == 0):
+                                        ?>
+                                        <p><?php the_sub_field('declaration'); ?></p>
+                                        <?php
+                                    endif;
+                                endwhile;
+                                ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php 
+                                $counter = 0;
+                                while(have_rows('declarations')):
+                                    $counter++;
+                                    the_row();
+                                    if($counter % 2 != 0):
+                                        ?>
+                                        <p><?php the_sub_field('declaration'); ?></p>
+                                        <?php
+                                    endif;
+                                endwhile; ?>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                        <?php 
-                        $counter = 0;
-                        while(have_rows('declarations')):
-                            $counter++;
-                            the_row();
-                            if($counter % 2 != 0):
-                            ?>
-                            <p><?php the_sub_field('declaration'); ?></p>
-                            <?php 
-                            endif;
-                        endwhile; ?>
-                        </div>
-                    </div>
                     <?php endif; ?>
                 </div>
             </div>
@@ -126,18 +121,17 @@ get_header(); ?>
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
                                 <p><?php echo $text; ?></p>
-
                                 <?php if(have_rows('declaration_buttons')): ?>
-                                <div class="buttons">
-                                    <?php 
-                                    while(have_rows('declaration_buttons')) : 
-                                        the_row(); 
-                                        $link   = get_sub_field('link');
-                                        $color  = get_sub_field('color');
-                                        ?>
-                                        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="<?php echo $color; ?> button"><?php echo $link['title']; ?></a>
-                                    <?php endwhile; ?>
-                                </div>
+                                    <div class="buttons">
+                                        <?php 
+                                        while(have_rows('declaration_buttons')) : 
+                                            the_row(); 
+                                            $link   = get_sub_field('link');
+                                            $color  = get_sub_field('color');
+                                            ?>
+                                            <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="<?php echo $color; ?> button"><?php echo $link['title']; ?></a>
+                                        <?php endwhile; ?>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                         </div>
