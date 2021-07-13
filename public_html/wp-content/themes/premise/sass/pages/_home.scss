@@ -90,6 +90,14 @@
             line-height: 1.77;
             margin: 0 0 20px;
         }
+
+        .buttons {
+            margin-bottom: 0;
+
+            .button {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -123,6 +131,18 @@
     }
 }
 
+@include media-breakpoint-down(md) {
+    .featured-content {
+        height: auto;
+
+        .card {
+            bottom: auto;
+            position: relative;
+            padding: 15px;
+        }
+    }
+}
+
 @include media-breakpoint-down(sm) {
     .features {
         max-width: 350px;
@@ -135,14 +155,11 @@
 
     .featured-content {
         .card {
-            max-width: 90%;
-            margin: 0 auto;
-            padding: 15px;
-
             h3 {
                 font-size: 24px;
                 margin: 0 0 20px;
             }
+
             h4 {
                 font-size: 18px;
             }

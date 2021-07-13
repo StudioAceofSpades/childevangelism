@@ -12,27 +12,28 @@ get_header(); ?>
             <div class="featured-content" style="background-image: url('<?php echo $bg['url']; ?>');">
                 <div class="container">
                     <div class="row">
-                        <div class="card">
-                            <?php if($title = get_field('title')): ?>
-                                <h3><?php echo $title; ?></h3>
-                            <?php endif; ?>
+                            <div class="col card">
+                                <?php if($title = get_field('title')): ?>
+                                    <h3><?php echo $title; ?></h3>
+                                <?php endif; ?>
 
-                            <?php if($subtitle = get_field('subtitle')): ?>
-                                <h4><?php echo $subtitle; ?></h4>
-                            <?php endif; ?>
+                                <?php if($subtitle = get_field('subtitle')): ?>
+                                    <h4><?php echo $subtitle; ?></h4>
+                                <?php endif; ?>
 
-                            <?php if($description = get_field('featured_description')) : ?>
-                                <div class="description">
-                                    <?php echo $description; ?>
-                                </div>
-                            <?php endif; ?>
-                            
-                            <?php if($link = get_field('link')): ?>
-                                <div class="buttons">
-                                    <a href="<?php echo $link['url']; ?>" class="button blue" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                                <?php if($description = get_field('featured_description')) : ?>
+                                    <div class="description">
+                                        <?php echo $description; ?>
+                                    </div>
+                                <?php endif; ?>
+                                
+                                <?php if($link = get_field('link')): ?>
+                                    <div class="buttons">
+                                        <a href="<?php echo $link['url']; ?>" class="button blue" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        
                     </div>
                 </div>
             </div>
