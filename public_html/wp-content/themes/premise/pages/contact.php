@@ -24,7 +24,7 @@ get_header(); ?>
                     <?php if (get_field('email')): ?>
                         <p>
                             <label>Email</label><br>
-                            <a href="#" target="_blank"><?php the_field('email'); ?></a>
+                            <a href="mailto:<?php the_field('email'); ?>" target="_blank"><?php the_field('email'); ?></a>
                         </p>
                         <?php
                     endif;
