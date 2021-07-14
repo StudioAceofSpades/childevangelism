@@ -70,7 +70,7 @@
         }
         &.hero-home {
             height: 590px;
-            margin-bottom: 60px;
+            border-bottom: 3px solid $orange;
 
             .hero-card {
                 max-width: 900px;
