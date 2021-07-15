@@ -121,12 +121,12 @@ img {
 }
 
 $bg-color:
-    (white, $white),
-    (dark-blue, $dark-blue),
-    (dark-gray, $dark-gray);
+    ("white", $white),
+    ("dark-blue", $dark-blue),
+    ("dark-gray", $dark-gray);
 
 @each $class, $color in $bg-color {
-    &.bg-#{$class} {
+    .bg-#{$class} {
         background-color: $color;
     }
 }
