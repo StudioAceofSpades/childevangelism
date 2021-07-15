@@ -1,5 +1,5 @@
 const  gulp               =  require('gulp');
-const  sass               =  require('gulp-sass');
+const  sass               =  require('gulp-sass')(require('sass'));
 const  sourcemaps         =  require('gulp-sourcemaps');
 const  autoprefixer       =  require('gulp-autoprefixer');
 const  concat             =  require('gulp-concat');
@@ -10,18 +10,15 @@ const  source_dir         =  "sourcemaps/";
 const  files              =  resource_dir +  "sass/**/*.scss";
 const  prodOutput         =  resource_dir;
 const  devOutput          =  resource_dir +  "devcss/";
-
 var devOptions = {
     errLogToConsole : true,
     outputStyle     : 'expanded',
     stdout          : false,
     stderr          : false,
 };
-
 var prodOptions = {
     outputStyle: 'compressed'
 };
-
 function dev() {
     return (
         gulp
