@@ -161,7 +161,9 @@ class Field_Select extends Select {
 		}
 
 		// Convert all auto-population choices to lowercase.
-		$default_value_choices = array_map( 'strtolower', $default_value_choices );
+		foreach( $default_value_choices as $key => $value ) {
+			$default_value_choices[ $key ] = $value ? strtolower( $value ) : $value;
+		}
 
 		// Loop through fields.
 		foreach ( $this->choices as $choice ) {
@@ -221,7 +223,7 @@ class Field_Select extends Select {
 			if ( is_array( $inputs ) ) {
 
 				// Add full value for certain fields.
-				switch ( $input_type ) {
+				switch ( $field->get_input_type() ) {
 
 					case 'address':
 					case 'name':
@@ -257,7 +259,7 @@ class Field_Select extends Select {
 					);
 
 				}
-			} elseif ( ! $field->displayOnly || $input_type === 'password' ) {
+			} elseif ( ! $field->displayOnly || $field->get_input_type() === 'password' ) {
 
 				$choices[] = array(
 					'value' => $field->id,

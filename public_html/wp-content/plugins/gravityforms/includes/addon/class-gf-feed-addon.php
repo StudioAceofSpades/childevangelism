@@ -65,6 +65,19 @@ abstract class GFFeedAddOn extends GFAddOn {
 	protected $_bypass_feed_delay = false;
 
 	/**
+	 * An array of properties relating to the delayed payment functionality.
+	 *
+	 * Set by passing the array to `$this->add_delayed_payment_support()` in `init()`.
+	 *
+	 * @since 2.7.14 Was a dynamic property in earlier versions.
+	 *
+	 * @var array {
+	 *     @type string $option_label The label to displayed for the add-ons delay checkbox, in the Post Payment Actions section of the payment add-ons feed configuration page.
+	 * }
+	 */
+	public $delayed_payment_integration = array();
+
+	/**
 	 * @var string Version number of the Add-On Framework
 	 */
 	private $_feed_version = '0.14';
@@ -93,7 +106,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 		parent::bootstrap();
 
 		if ( $this->is_feed_edit_page() ) {
-			add_action( 'init', array( $this, 'feed_settings_init' ), 20 );
+			add_action( 'admin_init', array( $this, 'feed_settings_init' ), 20 );
 		}
 	}
 
@@ -347,12 +360,13 @@ abstract class GFFeedAddOn extends GFAddOn {
 					// Add feed to processing queue.
 					gf_feed_processor()->push_to_queue(
 						array(
-							'addon' => $this,
+							'addon' => get_class( $this ),
 							'feed'  => $feed,
 							'entry_id' => $entry['id'],
 							'form_id'  => $form['id'],
 						)
 					);
+					$this->delay_feed( $feed, $entry, $form );
 
 				} else {
 
@@ -621,11 +635,6 @@ abstract class GFFeedAddOn extends GFAddOn {
 
 	public function get_feeds( $form_id = null ) {
 		global $wpdb;
-
-		if ( ! $this->addon_feed_table_exists() ) {
-			$this->show_table_not_exists_error( $wpdb->prefix . 'gf_addon_feed' );
-			return array();
-		}
 
 		$form_filter = is_numeric( $form_id ) ? $wpdb->prepare( 'AND form_id=%d', absint( $form_id ) ) : '';
 
@@ -1076,7 +1085,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 		}
 
 		$error   = $this->get_table_not_exists_error( $table );
-		$classes = $this->is_gravityforms_supported( '2.5-beta' ) ? 'gf-notice notice-error' : 'notice notice-error';
+		$classes = $this->is_gravityforms_supported( '2.5-beta' ) ? 'notice notice-error gf-notice' : 'notice notice-error';
 
 		$notice = sprintf(
 			'<div class="%s"><p>%s</p></div>',
@@ -1244,7 +1253,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 		if ( $this->is_feed_list_page() ) {
 			$title = $this->form_settings_title();
 			$url = add_query_arg( array( 'fid' => 0 ) );
-			return $title . " <a class='add-new-h2' href='" . esc_html( $url ) . "'>" . esc_html__( 'Add New', 'gravityforms' ) . '</a>';
+			return $title . " <a class='add-new-h2' href='" . esc_url( $url ) . "'>" . esc_html__( 'Add New', 'gravityforms' ) . '</a>';
 		}
 	}
 
@@ -1284,7 +1293,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 
 					// If feed IDs do not match, redirect.
 					if ( $feed_id !== $this->_current_feed_id && $this->_multiple_feeds ) {
-						wp_safe_redirect( add_query_arg( array( 'fid' => $this->_current_feed_id ) ) );
+						wp_safe_redirect( esc_url_raw( add_query_arg( array( 'fid' => $this->_current_feed_id ) ) ) );
 					}
 
 				},
@@ -1386,6 +1395,13 @@ abstract class GFFeedAddOn extends GFAddOn {
 	}
 
 	public function feed_list_page( $form = null ) {
+		global $wpdb;
+
+		if ( ! $this->addon_feed_table_exists() ) {
+			$this->show_table_not_exists_error( $wpdb->prefix . 'gf_addon_feed' );
+			return;
+		}
+
 		$action = $this->get_bulk_action();
 		if ( $action ) {
 			check_admin_referer( 'feed_list', 'feed_list' );
@@ -2455,7 +2471,7 @@ class GFAddOnFeedsTable extends WP_List_Table {
 	function _column_is_active( $item, $classes, $data, $primary ) {
 
 		// Open cell as a table header.
-		echo '<th scope="row" class="manage-column column-is_active">';
+		echo '<td class="manage-column column-is_active">';
 
 		// Display the active/inactive toggle button.
 		if ( rgar( $item, 'is_active' ) ) {
@@ -2467,13 +2483,13 @@ class GFAddOnFeedsTable extends WP_List_Table {
 		}
 		?>
 		<button type="button" class="gform-status-indicator <?php echo esc_attr( $class ); ?>" onclick="gaddon.toggleFeedActive( this, '<?php echo esc_js( $this->_slug ); ?>', '<?php echo esc_js( $item['id'] ); ?>' );" onkeypress="gaddon.toggleFeedActive( this, '<?php echo esc_js( $this->_slug ); ?>', '<?php echo esc_js( $item['id'] ); ?>' );">
-			<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="2" r="1" stroke-width="2"/></svg>
+			<svg role="presentation" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="2" r="1" stroke-width="2"/></svg>
 			<span class="gform-status-indicator-status"><?php echo esc_html( $text ); ?></span>
 		</button>
 		<?php
 
 		// Close cell.
-		echo '</th>';
+		echo '</td>';
 
 	}
 	/**
