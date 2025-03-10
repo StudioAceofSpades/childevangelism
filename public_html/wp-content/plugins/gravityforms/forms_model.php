@@ -1030,6 +1030,14 @@ class GFFormsModel {
 		// Ensure the next field ID is set correctly.
 		$form['nextFieldId'] = self::get_next_field_id( $form['fields'] );
 
+		// Ensure the form has a button property.
+		if ( rgempty( 'button', $form ) ) {
+			$form['button'] = array(
+				'type' => 'text',
+				'text' => __( 'Submit', 'gravityforms' ),
+			);
+		}
+
 		/**
 		 * Filters the Form object after the form meta is obtained
 		 *
@@ -2105,7 +2113,7 @@ class GFFormsModel {
 			$count = (int) $count_exists_in_title[2][0] + 1;
 
 			// Remove existing count from title.
-			$title = preg_replace( '/(\\(([0-9])*\\))$/mi', null, $title );
+			$title = preg_replace( '/(\\(([0-9])*\\))$/mi', '', $title );
 
 		}
 
